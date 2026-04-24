@@ -28,6 +28,25 @@
 
 `bible/`, `state/`, `timeline/`, `story/`, `.work/`, `.session/`, `CLAUDE.md`, `.gitignore` 스캐폴딩이 들어갑니다. 기존 파일은 덮어쓰지 않습니다.
 
+### 튜토리얼
+
+30~60분 walkthrough: [docs/TUTORIAL.md](docs/TUTORIAL.md) — 빈 폴더 → 챕터 1 확정까지.
+
+### 스크린샷 · 데모
+
+> 스크린샷·데모 GIF 는 실사용 세션에서 캡처 필요. 아래 장면을 제안:
+
+1. **`/plugin` 상태** — `novel-writer Plugin · hans-novel-tools` 성공 로드 표시
+2. **`/init-novel` 실행** — 빈 폴더에 28 파일 스캐폴딩이 한 번에 생성되는 로그
+3. **`/write-chapter 1` Gate 파이프라인** — G1~G5 리포트가 순차 생성되고 재작성 루프가 도는 시퀀스
+4. **`bible_guard` 훅 차단** — LOCKED 상태에서 bible/ 수정 시도 시 훅이 `exit 2` 로 막는 메시지
+5. **`/metrics` 출력** — 8챕터 기준 지표 표 전체
+
+캡처 방법:
+- macOS: `⇧⌘5` 로 터미널 영역 녹화 → `.mov` → `ffmpeg` 로 `.gif` 변환 (`ffmpeg -i in.mov -vf "fps=10,scale=900:-1" out.gif`)
+- 또는 [asciinema](https://asciinema.org) 로 터미널 세션 녹화 → SVG/GIF export
+- 캡처물은 `docs/screenshots/` 에 두고 이 섹션에서 상대 경로로 참조
+
 ---
 
 ## 빠른 시작 (작가 워크플로우)

@@ -27,3 +27,4 @@ yarn-error.log*
 # 환경
 .env*.local
 .env
+screen.png
