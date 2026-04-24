@@ -1,0 +1,79 @@
+chapter: 3
+completed_at: 2026-04-24T11:20:00+09:00
+# 서사 내: 1923-01-17 수요일 22:00 경 (도현 편지 실패 후)
+
+characters:
+  kim-dohyun:
+    version: v1-말
+    physical:
+      location: 자택, 본인 방 (책상 앞)
+      injuries: [왼손 검지 오래된 흉터 (배경)]
+      fatigue_level: high
+    emotional:
+      dominant: 자각한 불안 (딸 의심 직면)
+      toward:
+        sumin: 애정 유지 + 거리감 자각 시작
+        park-bujang: 경계 유지
+        lee-seah: 업무 거리 (변화 없음)
+    knowledge:
+      aware_of:
+        - 상하이 파견 명령 (1월 15일)
+        - 명령서 1월 11일 결정 단서
+        - 1921년 박 부장 봉투 목격 (배경)
+        - 이세아의 존재 (ch2~)
+        - 이세아의 목례 각도가 박 부장과 닮았다는 관찰 (ch2)
+        - "**수민이 아버지의 무언가를 의심한다는 사실** (ch3 1st turning point)"
+        - 수민이 방 서랍을 한 번 뒤졌다 (간접 추정)
+      unaware_of:
+        - 수민이 구체적으로 무엇을 아는지 (1921 급여 명세서 발견 여부 등)
+        - 박 부장의 실제 공작 내용 (ch7)
+        - 이세아의 정체 (ch10)
+    last_dialogue_ref: story/chapters/chapter-03.md#scene-3
+    notes:
+      - "편지 한 문장도 못 썼음 — ch9 수민 방문 장면까지 미결 상태로 유지"
+
+  sumin:
+    version: v1-말
+    physical:
+      location: 자택, 자기 방
+      fatigue_level: mid
+    emotional:
+      dominant: 참았던 질문을 내놓은 뒤의 소강
+      toward:
+        kim-dohyun: 애정 유지 + 신뢰 한 단계 하락 (아버지의 거짓 응답 경험)
+    knowledge:
+      aware_of:
+        - 아버지가 1921년 가을 전후 뭔가 숨기고 있다는 의심 (Bible 배경 구체화)
+        - 아버지 서랍 수첩 위치가 다르다는 관찰 (본인이 옮김)
+        - 오늘 아버지가 "별일 없었네" 로 거짓 답했다는 것
+      unaware_of:
+        - 아버지 비밀의 구체 내용 (박 부장 봉투)
+        - 상하이 파견 명령의 존재 (ch9 에서 명령서 사본 발견 예정)
+    last_dialogue_ref: story/chapters/chapter-03.md#scene-3
+
+  lee-seah:
+    version: v1
+    physical:
+      location: 종로 경찰서 2층 (오후 근무 — 챕터 3 종료 시점은 불명, 아마 귀가)
+      fatigue_level: unclear
+    emotional:
+      dominant: (변화 없음, 위장 유지)
+      toward:
+        kim-dohyun: 감시 (Bible 배경)
+    knowledge:
+      aware_of: []          # POV 가 도현이므로 노출 금지. 본 상태 추적용 메모는 비움
+      unaware_of: []
+    last_dialogue_ref: story/chapters/chapter-03.md#scene-1
+
+  park-bujang:
+    version: v1
+    physical:
+      location: 불명 (ch3 직접 등장 없음)
+    emotional:
+      dominant: (변화 없음)
+      toward:
+        kim-dohyun: 도구적
+    knowledge:
+      aware_of: [도현의 1921 목격 가능성, 파견 내정]
+      unaware_of: [이세아의 실제 신분]
+    last_dialogue_ref: story/chapters/chapter-01.md#scene-2

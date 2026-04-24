@@ -1,0 +1,71 @@
+chapter: 5
+completed_at: 2026-04-24T11:45:00+09:00
+# 서사 내: 1923-01-23 화요일 저녁, 상하이 프랑스 조계 임시 사무실
+
+characters:
+  kim-dohyun:
+    version: v1-말
+    physical:
+      location: 상하이 프랑스 조계 임시 사무실 (조계 동쪽 이층)
+      injuries: [왼손 검지 흉터 (배경)]
+      fatigue_level: mid     # 5일 이동 후 도착 당일 — high 에서 하락
+    emotional:
+      dominant: 긴장감 유지 + 낯선 지리의 긴장
+      toward:
+        park-bujang: 경계 강화
+        lee-seah: 관찰의 무게 증가 (차 동작)
+        sumin: 편지 1줄 — 거리감 유지
+    knowledge:
+      aware_of:
+        - 상하이 도착 (01-23)
+        - 프랑스 조계 내 임시 사무실 배정
+        - 조사 대상 명단에 **1921 가을 회의록에서 본 적 있는 이름** 포함 (SP-A 간접 단서 #5)
+        - 이세아의 차 내림 동작이 "오래된 절차" 같다는 관찰 (SP-B 단서 #3)
+        - 수민의 의심·편지 미완결 (ch3~)
+        - 박 부장의 "특별히 잘 부탁해" (ch4)
+        - 1921 박 부장 봉투 (배경)
+      unaware_of:
+        - 박 부장의 실제 공작 (ch7)
+        - 이세아의 정체 (ch10)
+        - 수민이 구체적으로 무엇을 아는지
+    last_dialogue_ref: story/chapters/chapter-05.md#scene-3
+
+  lee-seah:
+    version: v1
+    physical:
+      location: 상하이 프랑스 조계 임시 사무실
+      fatigue_level: unclear
+    emotional:
+      dominant: (위장 유지)
+    knowledge:
+      aware_of: []
+      unaware_of: []
+    last_dialogue_ref: story/chapters/chapter-05.md#scene-3
+    notes:
+      - "도현의 '멈춘 손가락' 관찰 여부는 모호 — Bible 의 위장 유지 규칙 준수"
+
+  park-bujang:
+    version: v1
+    physical:
+      location: 경무국 (배경)
+    emotional:
+      dominant: (변화 없음)
+      toward: { kim-dohyun: 도구적 }
+    knowledge:
+      aware_of: [도현이 상하이 도착]
+      unaware_of: [이세아 정체, 도현의 의심 수위]
+    last_dialogue_ref: story/chapters/chapter-04.md#scene-1
+
+  sumin:
+    version: v1-말
+    physical:
+      location: 경성 자택 (혼자, ch4 이후 유지)
+      fatigue_level: unclear
+    emotional:
+      dominant: 소강
+    knowledge:
+      aware_of: [아버지 상하이 출장, 아버지의 거짓 (ch3)]
+      unaware_of: [상하이 파견 공식 목적, 박 부장 봉투 구체 내용]
+    last_dialogue_ref: story/chapters/chapter-03.md#scene-3
+    notes:
+      - "도현의 편지 1줄이 실제 도착은 약 5일 후 — state/chapter-06 시점에 수민이 받을 가능성"

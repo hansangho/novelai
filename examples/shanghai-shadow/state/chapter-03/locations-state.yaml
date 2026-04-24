@@ -1,0 +1,16 @@
+chapter: 3
+completed_at: 2026-04-24T11:20:00+09:00
+
+locations:
+  jongno-station:
+    status: operational
+    controlled_by: 조선총독부 경무국
+    notes:
+      - "ch3 에는 도현의 2층 책상만 등장. 내부 전보 기능 활용"
+
+  kim-dohyun-home:
+    status: operational
+    notable_changes:
+      - "도현 방 서랍: 수첩 위치가 반 뼘 이동 — 수민이 한 번 만진 흔적"
+    notes:
+      - "ch3 에서 주요 무대. ch9 에서 재사용 예정 (수민 방문)"

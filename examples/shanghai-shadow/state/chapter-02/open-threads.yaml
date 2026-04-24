@@ -1,0 +1,32 @@
+chapter: 2
+completed_at: 2026-04-24T11:05:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작 (상하이 파견의 진짜 목적)
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 2
+    status: open
+    planned_payoff_chapter: 7
+    notes: >-
+      챕터 2 에서 새로운 단서: 도현이 "박 부장과 이세아의 목례 각도가 닮았다" 를
+      마음에 메모. 이 유사성 자체가 후속 단서의 씨앗.
+
+  - id: SP-B
+    label: 이세아의 정체 (의열단 잠입)
+    opened_at_chapter: 0
+    last_hinted_at_chapter: 2     # 첫 등장으로 스레드 활성화
+    status: open
+    planned_payoff_chapter: 10
+    notes: >-
+      첫 등장. 외면적 정보 (이름·외모·발소리·대사 톤) 만 공개.
+      내면·정체 관련 어떤 단서도 본문에 없음 — 정확한 v1 시작점.
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 1      # 챕터 2 에 등장 없음 — 업데이트 없음
+    status: open
+    planned_payoff_chapter: 9
+    notes: >-
+      챕터 2 에 등장 없음. 상태 유지. 다음 자각은 챕터 3 (plan.md 와 일치).

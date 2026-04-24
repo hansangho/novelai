@@ -1,0 +1,17 @@
+chapter: 2
+completed_at: 2026-04-24T11:05:00+09:00
+
+locations:
+  jongno-station:
+    status: operational
+    controlled_by: 조선총독부 경무국
+    notable_changes: []
+    notes:
+      - "챕터 2 에서 2층 일반 사무실 활성화 (도현·이세아 책상 배치)"
+      - "이세아가 도현 옆 두 걸음 반 거리의 책상 배정"
+
+  kim-dohyun-home:
+    status: operational
+    notable_changes: []
+    notes:
+      - "챕터 2 등장 없음"

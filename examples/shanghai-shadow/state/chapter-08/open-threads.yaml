@@ -1,0 +1,27 @@
+chapter: 8
+completed_at: 2026-04-24T12:25:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 7
+    status: partial
+    planned_payoff_chapter: 12
+    notes: "ch8 변화 없음 (서류 소각 = 도현의 보호 조치). ch9~11 에 도현의 선택 결정."
+
+  - id: SP-B
+    label: 이세아의 정체
+    opened_at_chapter: 0
+    last_hinted_at_chapter: 8       # ch8 탐색 질문
+    status: open
+    planned_payoff_chapter: 10
+    notes: "이세아가 '제가 알 필요가 있는 일인가요?' 로 탐색 → 도현 무응답, 이세아 물러섬. ch10 reveal 향한 마지막 단서."
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 3
+    status: partial
+    planned_payoff_chapter: 9
+    notes: "도현 ch9 에 경성 귀환, 수민 대면 예정."

@@ -1,0 +1,27 @@
+chapter: 4
+completed_at: 2026-04-24T11:30:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 4      # ch2 → ch4 ("특별히 잘 부탁해")
+    status: open
+    planned_payoff_chapter: 7
+    notes: "박 부장의 화법 일탈 — Bible 에 명시된 '다른 공작의 신호'. 도현이 이를 인지."
+
+  - id: SP-B
+    label: 이세아의 정체
+    opened_at_chapter: 0
+    last_hinted_at_chapter: 4      # ch2 → ch4 (차창 '먼 지점' 시선)
+    status: open
+    planned_payoff_chapter: 10
+    notes: "차창 밖 오래 본 먼 지점 — 독자에게만 암시, 도현은 '감시자의 정적' 수준으로 해석."
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 3
+    status: partial
+    planned_payoff_chapter: 9
+    notes: "ch4 변화 없음. 편지 미완결 상태가 ch9 까지 잠복."

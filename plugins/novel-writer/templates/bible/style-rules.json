@@ -1,0 +1,31 @@
+{
+  "$schema": "./style-rules.schema.json",
+  "version": "1.4",
+  "forbidden_phrases": [
+    { "pattern": "그러나", "suggestion": "그런데|하지만", "severity": "warn" },
+    { "pattern": "~의 것이다", "reason": "번역투", "severity": "warn" },
+    { "pattern": "ㅎㅎ", "severity": "error" }
+  ],
+  "adverb_density": {
+    "max_per_sentence": 1,
+    "targets": ["매우", "정말", "너무", "아주"]
+  },
+  "ai_openings": [
+    "^그날 아침",
+    "^운명의",
+    "^.+는 생각했다"
+  ],
+  "sentence_length": {
+    "target_range": [15, 25],
+    "max_consecutive_long": 3
+  },
+  "scene_overrides": {
+    "action":   { "target_range": [5, 15] },
+    "lyrical":  { "target_range": [20, 40] },
+    "dialogue": { "target_range": [3, 30] }
+  },
+  "dialogue_tag_rules": {
+    "max_consecutive_said": 1,
+    "said_variants": ["말했다", "물었다", "중얼거렸다", "내뱉었다", "속삭였다"]
+  }
+}

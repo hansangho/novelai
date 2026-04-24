@@ -1,0 +1,12 @@
+# .session/current.yaml — 휘발성 세션 상태 (Session Manager 관리)
+# 실제 파일은 .gitignore 로 제외됨. 이 예시만 추적된다.
+
+session_id: "2026-04-24T10:28:00+09:00"
+phase: drafting            # planning | research | characters | structure | drafting | revision
+active_chapter: null       # 예: 5
+gate_cursor: null          # 예: G3
+rewrite_iteration: 0       # 0~3
+last_agent: null
+unresolved_escalations: []
+notes: |
+  /resume 시 이 파일을 읽어 컨텍스트 복원.

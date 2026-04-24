@@ -1,0 +1,9 @@
+# state/chapter-NN/locations-state.yaml
+# 주요 장소의 현재 상태 (점령·파괴·개장·운영 등).
+# 필드: status (operational | damaged | destroyed | abandoned),
+#       controlled_by, notable_changes (배열), notes (배열)
+
+chapter: 0
+completed_at: null
+
+locations: {}

@@ -1,0 +1,22 @@
+# state/chapter-NN/character-states.yaml
+# 챕터 말 시점의 각 캐릭터 상태 스냅샷.
+# State Updater 가 챕터 확정 직후 채운다 (PRD §4.3).
+#
+# 사용법: state_snapshot.py 가 이 파일을 복사한다.
+# State Updater 는 아래 `characters:` 에 bible/characters/*.md 의 id 별 블록을 추가한다.
+# 한 블록 당 필드:
+#   version           — Bible arc 버전 (v1, v2, …)
+#   physical.location — 챕터 종료 시 위치
+#   physical.injuries — 누적 상태
+#   physical.fatigue_level — low | mid | high | unclear
+#   emotional.dominant — 지배 감정 1개
+#   emotional.toward.<id> — 상대별 관계 어조 변화 (자유 문자열)
+#   knowledge.aware_of    — 이 시점까지 알게 된 것
+#   knowledge.unaware_of  — 정보 누수 차단용 (Character Guardian 이 참조)
+#   last_dialogue_ref     — story/chapters/...#scene-N 등 추적 힌트
+#   notes                 — 다음 챕터가 지켜야 할 메모
+
+chapter: 0
+completed_at: null
+
+characters: {}

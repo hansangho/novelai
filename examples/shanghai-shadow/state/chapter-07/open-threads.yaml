@@ -1,0 +1,32 @@
+chapter: 7
+completed_at: 2026-04-24T12:15:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 7
+    status: partial       # open → partial. 증거 서류 확인 완료, '목적' 은 미해결 (ch11+)
+    planned_payoff_chapter: 12      # 재조정: 완전 회수는 ch11~12 로 이동
+    notes: >-
+      ch7 Midpoint Reversal: 박 부장이 1922-08 상하이 영사관 기록에 의열단 조력자
+      가명과 동행자로 등재됨을 도현이 확인. 박 부장의 **구체적 의도**(어느 편을
+      속이는가) 는 아직 미해결 — 이후 챕터들의 동력.
+
+  - id: SP-B
+    label: 이세아의 정체
+    opened_at_chapter: 0
+    last_hinted_at_chapter: 7      # 도현의 "이름을 얹었다 밀어냄" — 의심 씨앗
+    status: open
+    planned_payoff_chapter: 10
+    notes: >-
+      도현이 이세아 이름을 의심 선상에 한 번 올렸다가 증거 부재로 내려놓음.
+      ch10 reveal 전까지 이 '보류된 의심' 이 깔림.
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 3
+    status: partial
+    planned_payoff_chapter: 9
+    notes: "ch7 변화 없음. 도현 귀환 이후(ch8~9) 에서 대면 예정."

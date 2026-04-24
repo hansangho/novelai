@@ -1,0 +1,35 @@
+# state/chapter-01/open-threads.yaml
+
+chapter: 1
+completed_at: 2026-04-24T10:57:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작 (상하이 파견의 진짜 목적)
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 1
+    status: open
+    planned_payoff_chapter: 7
+    notes: >-
+      챕터 1 단서: (1) 박 부장과의 아침 눈마주침, (2) 1921년 봉투 회상,
+      (3) 명령서 날짜 1월 11일("나흘 전 결정"). 도현은 의심만, 구체는 모름.
+
+  - id: SP-B
+    label: 이세아의 정체 (의열단 잠입)
+    opened_at_chapter: 0            # Bible 설정, 본편 등장 전
+    last_hinted_at_chapter: 1        # 챕터 1 마지막 "예감" 도입
+    status: open
+    planned_payoff_chapter: 10
+    notes: >-
+      챕터 1 마지막 "누군가가 자기 일상의 한 쪽에 앉아 있을 것" 이라는 예감으로만
+      존재. 챕터 2에서 첫 등장.
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 1
+    status: open
+    planned_payoff_chapter: 9
+    notes: >-
+      챕터 1 저녁 식탁 "멈춘 숟가락" 만 복선. 도현 자각은 챕터 3 예정.
+      relationships.yaml 의 sumin→kim-dohyun trust 비대칭(8 vs 9) 로도 추적.

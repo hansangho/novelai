@@ -1,0 +1,27 @@
+chapter: 5
+completed_at: 2026-04-24T11:45:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 5       # ch4 → ch5 (상하이 명단 낯익은 이름)
+    status: open
+    planned_payoff_chapter: 7
+    notes: "상하이 조사 대상 명단에서 도현이 1921 회의록의 이름을 재발견. 박 부장의 과거 행적과의 연결 고리 생김."
+
+  - id: SP-B
+    label: 이세아의 정체
+    opened_at_chapter: 0
+    last_hinted_at_chapter: 5       # ch4 → ch5 (차 내림 동작의 정확성)
+    status: open
+    planned_payoff_chapter: 10
+    notes: "차 동작이 '오래된 절차' — 독자에게 명확한 씨앗, 도현은 해석 유보."
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 3
+    status: partial
+    planned_payoff_chapter: 9
+    notes: "ch5 변화 없음. 도현의 편지 1줄만 — 수민은 약 5일 후 수령 예정."

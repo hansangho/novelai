@@ -1,0 +1,59 @@
+chapter: 8
+completed_at: 2026-04-24T12:25:00+09:00
+# 서사 내: 1923-03-02 금요일 밤, 관부연락선 갑판 (시모노세키 ~ 부산 구간)
+
+characters:
+  kim-dohyun:
+    version: v2
+    physical:
+      location: 관부연락선 갑판
+      fatigue_level: mid
+    emotional:
+      dominant: 미결정 (박 부장 처리 두 길 사이)
+      toward:
+        park-bujang: 적대 지속
+        lee-seah: 경계 상승 (탐색 질문 수령 후 거리 유지)
+        sumin: 귀환 직전 — 대면 긴장 예감
+    knowledge:
+      aware_of:
+        - (ch1-7 누적 항목 유지)
+        - 이세아가 "상하이에서 확인한 것이 알 필요가 있는 일인지" 물었다 (의중 탐색)
+        - 서류를 불태움 — 박 부장 접촉 증거 일부 인멸
+      unaware_of:
+        - 박 부장의 정확한 의도
+        - 이세아의 정체
+        - 수민 구체 지식
+    last_dialogue_ref: story/chapters/chapter-08.md#scene-2
+
+  lee-seah:
+    version: v1
+    physical:
+      location: 관부연락선 갑판
+      fatigue_level: unclear
+    emotional:
+      dominant: (위장 유지)
+    knowledge:
+      aware_of: []
+      unaware_of: []
+    last_dialogue_ref: story/chapters/chapter-08.md#scene-2
+    notes:
+      - "질문 후 스스로 물러남 — Bible 의 '한 번 정한 임무 완수' 와 '감정 이입 길게 금기' 의 균형"
+
+  park-bujang:
+    version: v2
+    physical: { location: 경성 (배경) }
+    emotional: { dominant: (도현 귀환 준비 중 — 가설) }
+    knowledge:
+      aware_of: [도현 귀환 예정]
+      unaware_of: [도현이 영사관 기록 확인, 서류 소각]
+    last_dialogue_ref: story/chapters/chapter-04.md#scene-1
+
+  sumin:
+    version: v1-말
+    physical: { location: 경성 자택 }
+    emotional: { dominant: 기다림 }
+    knowledge:
+      aware_of: [아버지 귀환 임박 — 아마 편지로 통지받음 가정, 또는 막연한 기다림]
+      unaware_of: [상하이 파견 세부, 박 부장 관계]
+    last_dialogue_ref: story/chapters/chapter-03.md#scene-3
+    notes: ["ch9 에서 정면 충돌 예정"]

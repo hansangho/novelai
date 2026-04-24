@@ -1,0 +1,703 @@
+{
+  "metrics": {
+    "artifacts": {
+      "chapters_finalized": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "state_snapshots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "bible_files": [
+        "bible/LOCK_STATUS.md",
+        "bible/_changelog.md",
+        "bible/characters/_index.md",
+        "bible/characters/_template.md",
+        "bible/characters/kim-dohyun.md",
+        "bible/characters/kim-sumin.md",
+        "bible/characters/lee-seah.md",
+        "bible/characters/park-bujang.md",
+        "bible/structure.md",
+        "bible/style-rules.json",
+        "bible/style.md",
+        "bible/universe/_overview.md",
+        "bible/universe/historical-facts.md",
+        "bible/universe/locations/jongno-station.md",
+        "bible/universe/locations/shanghai-concession.md",
+        "bible/universe/rules.md"
+      ],
+      "review_files": [
+        "character-review.md",
+        "continuity-review.md",
+        "integration.md",
+        "perplexity-report.md",
+        "style-lint.md"
+      ],
+      "current_symlink": "chapter-08"
+    },
+    "story": {
+      "per_chapter": [
+        {
+          "chapter": 1,
+          "bytes": 3652,
+          "chars": 1736,
+          "lines": 62
+        },
+        {
+          "chapter": 2,
+          "bytes": 1607,
+          "chars": 717,
+          "lines": 21
+        },
+        {
+          "chapter": 3,
+          "bytes": 2690,
+          "chars": 1242,
+          "lines": 49
+        },
+        {
+          "chapter": 4,
+          "bytes": 1537,
+          "chars": 729,
+          "lines": 33
+        },
+        {
+          "chapter": 5,
+          "bytes": 2624,
+          "chars": 1174,
+          "lines": 33
+        },
+        {
+          "chapter": 6,
+          "bytes": 1971,
+          "chars": 915,
+          "lines": 43
+        },
+        {
+          "chapter": 7,
+          "bytes": 3611,
+          "chars": 1645,
+          "lines": 49
+        },
+        {
+          "chapter": 8,
+          "bytes": 1589,
+          "chars": 737,
+          "lines": 33
+        }
+      ],
+      "total_chars": 8895,
+      "total_lines": 323,
+      "count": 8
+    },
+    "timeline": {
+      "exists": true,
+      "total_bytes": 11381,
+      "total_lines": 244,
+      "total_chars": 6178,
+      "per_chapter": [
+        {
+          "chapter": 1,
+          "lines": 35,
+          "chars": 985
+        },
+        {
+          "chapter": 2,
+          "lines": 27,
+          "chars": 660
+        },
+        {
+          "chapter": 3,
+          "lines": 28,
+          "chars": 813
+        },
+        {
+          "chapter": 4,
+          "lines": 22,
+          "chars": 499
+        },
+        {
+          "chapter": 5,
+          "lines": 23,
+          "chars": 686
+        },
+        {
+          "chapter": 6,
+          "lines": 22,
+          "chars": 626
+        },
+        {
+          "chapter": 7,
+          "lines": 29,
+          "chars": 822
+        },
+        {
+          "chapter": 8,
+          "lines": 40,
+          "chars": 665
+        }
+      ]
+    },
+    "state_sizes": [
+      {
+        "chapter": 1,
+        "total_bytes": 4828,
+        "files": {
+          "character-states.yaml": 2278,
+          "open-threads.yaml": 1256,
+          "relationships.yaml": 768,
+          "locations-state.yaml": 526
+        }
+      },
+      {
+        "chapter": 2,
+        "total_bytes": 5213,
+        "files": {
+          "character-states.yaml": 2447,
+          "open-threads.yaml": 1162,
+          "relationships.yaml": 1142,
+          "locations-state.yaml": 462
+        }
+      },
+      {
+        "chapter": 3,
+        "total_bytes": 5891,
+        "files": {
+          "character-states.yaml": 3059,
+          "open-threads.yaml": 1170,
+          "relationships.yaml": 1166,
+          "locations-state.yaml": 496
+        }
+      },
+      {
+        "chapter": 4,
+        "total_bytes": 5044,
+        "files": {
+          "character-states.yaml": 2659,
+          "open-threads.yaml": 927,
+          "relationships.yaml": 802,
+          "locations-state.yaml": 656
+        }
+      },
+      {
+        "chapter": 5,
+        "total_bytes": 5100,
+        "files": {
+          "character-states.yaml": 2636,
+          "open-threads.yaml": 979,
+          "relationships.yaml": 671,
+          "locations-state.yaml": 814
+        }
+      },
+      {
+        "chapter": 6,
+        "total_bytes": 4737,
+        "files": {
+          "character-states.yaml": 2567,
+          "open-threads.yaml": 884,
+          "relationships.yaml": 769,
+          "locations-state.yaml": 517
+        }
+      },
+      {
+        "chapter": 7,
+        "total_bytes": 5795,
+        "files": {
+          "character-states.yaml": 3123,
+          "open-threads.yaml": 1282,
+          "relationships.yaml": 809,
+          "locations-state.yaml": 581
+        }
+      },
+      {
+        "chapter": 8,
+        "total_bytes": 4180,
+        "files": {
+          "character-states.yaml": 2107,
+          "open-threads.yaml": 876,
+          "relationships.yaml": 619,
+          "locations-state.yaml": 578
+        }
+      }
+    ],
+    "bible": {
+      "exists": true,
+      "total_bytes": 26313,
+      "file_count": 16,
+      "files": [
+        {
+          "path": "bible/structure.md",
+          "bytes": 1494
+        },
+        {
+          "path": "bible/LOCK_STATUS.md",
+          "bytes": 686
+        },
+        {
+          "path": "bible/_changelog.md",
+          "bytes": 1224
+        },
+        {
+          "path": "bible/style.md",
+          "bytes": 2018
+        },
+        {
+          "path": "bible/style-rules.json",
+          "bytes": 925
+        },
+        {
+          "path": "bible/characters/kim-dohyun.md",
+          "bytes": 3669
+        },
+        {
+          "path": "bible/characters/_template.md",
+          "bytes": 977
+        },
+        {
+          "path": "bible/characters/lee-seah.md",
+          "bytes": 3204
+        },
+        {
+          "path": "bible/characters/kim-sumin.md",
+          "bytes": 2160
+        },
+        {
+          "path": "bible/characters/park-bujang.md",
+          "bytes": 2382
+        },
+        {
+          "path": "bible/characters/_index.md",
+          "bytes": 772
+        },
+        {
+          "path": "bible/universe/_overview.md",
+          "bytes": 1447
+        },
+        {
+          "path": "bible/universe/historical-facts.md",
+          "bytes": 1482
+        },
+        {
+          "path": "bible/universe/rules.md",
+          "bytes": 1096
+        },
+        {
+          "path": "bible/universe/locations/jongno-station.md",
+          "bytes": 1129
+        },
+        {
+          "path": "bible/universe/locations/shanghai-concession.md",
+          "bytes": 1648
+        }
+      ]
+    },
+    "gate_stats": {
+      "exists": true,
+      "chapters_tracked": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "final_iter_per_chapter": {
+        "1": 2,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 2,
+        "8": 1
+      },
+      "gate_counts": {
+        "PASS": 33,
+        "FAIL": 7,
+        "WARN": 10,
+        "OVERRIDE": 0
+      },
+      "finalized_chapters": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "avg_rewrites_per_chapter": 0.25,
+      "max_rewrites": 1
+    },
+    "sp_tracking": {
+      "available": true,
+      "threads": {
+        "SP-A": [
+          {
+            "at_chapter": 1,
+            "status": "open",
+            "last_hinted": 1,
+            "payoff": 7,
+            "label": "박 부장의 실제 공작 (상하이 파견의 진짜 목적)"
+          },
+          {
+            "at_chapter": 2,
+            "status": "open",
+            "last_hinted": 2,
+            "payoff": 7,
+            "label": "박 부장의 실제 공작 (상하이 파견의 진짜 목적)"
+          },
+          {
+            "at_chapter": 3,
+            "status": "open",
+            "last_hinted": 2,
+            "payoff": 7,
+            "label": "박 부장의 실제 공작 (상하이 파견의 진짜 목적)"
+          },
+          {
+            "at_chapter": 4,
+            "status": "open",
+            "last_hinted": 4,
+            "payoff": 7,
+            "label": "박 부장의 실제 공작"
+          },
+          {
+            "at_chapter": 5,
+            "status": "open",
+            "last_hinted": 5,
+            "payoff": 7,
+            "label": "박 부장의 실제 공작"
+          },
+          {
+            "at_chapter": 6,
+            "status": "open",
+            "last_hinted": 6,
+            "payoff": 7,
+            "label": "박 부장의 실제 공작"
+          },
+          {
+            "at_chapter": 7,
+            "status": "partial",
+            "last_hinted": 7,
+            "payoff": 12,
+            "label": "박 부장의 실제 공작"
+          },
+          {
+            "at_chapter": 8,
+            "status": "partial",
+            "last_hinted": 7,
+            "payoff": 12,
+            "label": "박 부장의 실제 공작"
+          }
+        ],
+        "SP-B": [
+          {
+            "at_chapter": 1,
+            "status": "open",
+            "last_hinted": 1,
+            "payoff": 10,
+            "label": "이세아의 정체 (의열단 잠입)"
+          },
+          {
+            "at_chapter": 2,
+            "status": "open",
+            "last_hinted": 2,
+            "payoff": 10,
+            "label": "이세아의 정체 (의열단 잠입)"
+          },
+          {
+            "at_chapter": 3,
+            "status": "open",
+            "last_hinted": 2,
+            "payoff": 10,
+            "label": "이세아의 정체 (의열단 잠입)"
+          },
+          {
+            "at_chapter": 4,
+            "status": "open",
+            "last_hinted": 4,
+            "payoff": 10,
+            "label": "이세아의 정체"
+          },
+          {
+            "at_chapter": 5,
+            "status": "open",
+            "last_hinted": 5,
+            "payoff": 10,
+            "label": "이세아의 정체"
+          },
+          {
+            "at_chapter": 6,
+            "status": "open",
+            "last_hinted": 6,
+            "payoff": 10,
+            "label": "이세아의 정체"
+          },
+          {
+            "at_chapter": 7,
+            "status": "open",
+            "last_hinted": 7,
+            "payoff": 10,
+            "label": "이세아의 정체"
+          },
+          {
+            "at_chapter": 8,
+            "status": "open",
+            "last_hinted": 8,
+            "payoff": 10,
+            "label": "이세아의 정체"
+          }
+        ],
+        "SP-C": [
+          {
+            "at_chapter": 1,
+            "status": "open",
+            "last_hinted": 1,
+            "payoff": 9,
+            "label": "수민의 의심"
+          },
+          {
+            "at_chapter": 2,
+            "status": "open",
+            "last_hinted": 1,
+            "payoff": 9,
+            "label": "수민의 의심"
+          },
+          {
+            "at_chapter": 3,
+            "status": "partial",
+            "last_hinted": 3,
+            "payoff": 9,
+            "label": "수민의 의심"
+          },
+          {
+            "at_chapter": 4,
+            "status": "partial",
+            "last_hinted": 3,
+            "payoff": 9,
+            "label": "수민의 의심"
+          },
+          {
+            "at_chapter": 5,
+            "status": "partial",
+            "last_hinted": 3,
+            "payoff": 9,
+            "label": "수민의 의심"
+          },
+          {
+            "at_chapter": 6,
+            "status": "partial",
+            "last_hinted": 3,
+            "payoff": 9,
+            "label": "수민의 의심"
+          },
+          {
+            "at_chapter": 7,
+            "status": "partial",
+            "last_hinted": 3,
+            "payoff": 9,
+            "label": "수민의 의심"
+          },
+          {
+            "at_chapter": 8,
+            "status": "partial",
+            "last_hinted": 3,
+            "payoff": 9,
+            "label": "수민의 의심"
+          }
+        ]
+      }
+    },
+    "knowledge_growth": {
+      "available": true,
+      "characters": {
+        "kim-dohyun": [
+          {
+            "chapter": 1,
+            "aware_of": 4,
+            "unaware_of": 3
+          },
+          {
+            "chapter": 2,
+            "aware_of": 3,
+            "unaware_of": 3
+          },
+          {
+            "chapter": 3,
+            "aware_of": 7,
+            "unaware_of": 3
+          },
+          {
+            "chapter": 4,
+            "aware_of": 7,
+            "unaware_of": 3
+          },
+          {
+            "chapter": 5,
+            "aware_of": 7,
+            "unaware_of": 3
+          },
+          {
+            "chapter": 6,
+            "aware_of": 4,
+            "unaware_of": 3
+          },
+          {
+            "chapter": 7,
+            "aware_of": 5,
+            "unaware_of": 3
+          },
+          {
+            "chapter": 8,
+            "aware_of": 3,
+            "unaware_of": 3
+          }
+        ],
+        "sumin": [
+          {
+            "chapter": 1,
+            "aware_of": 1,
+            "unaware_of": 0
+          },
+          {
+            "chapter": 2,
+            "aware_of": 0,
+            "unaware_of": 0
+          },
+          {
+            "chapter": 3,
+            "aware_of": 3,
+            "unaware_of": 2
+          },
+          {
+            "chapter": 4,
+            "aware_of": 2,
+            "unaware_of": 1
+          },
+          {
+            "chapter": 5,
+            "aware_of": 2,
+            "unaware_of": 2
+          },
+          {
+            "chapter": 6,
+            "aware_of": 2,
+            "unaware_of": 1
+          },
+          {
+            "chapter": 7,
+            "aware_of": 2,
+            "unaware_of": 1
+          },
+          {
+            "chapter": 8,
+            "aware_of": 2,
+            "unaware_of": 2
+          }
+        ],
+        "park-bujang": [
+          {
+            "chapter": 1,
+            "aware_of": 2,
+            "unaware_of": 1
+          },
+          {
+            "chapter": 2,
+            "aware_of": 2,
+            "unaware_of": 1
+          },
+          {
+            "chapter": 3,
+            "aware_of": 2,
+            "unaware_of": 1
+          },
+          {
+            "chapter": 4,
+            "aware_of": 2,
+            "unaware_of": 1
+          },
+          {
+            "chapter": 5,
+            "aware_of": 1,
+            "unaware_of": 2
+          },
+          {
+            "chapter": 6,
+            "aware_of": 2,
+            "unaware_of": 1
+          },
+          {
+            "chapter": 7,
+            "aware_of": 2,
+            "unaware_of": 2
+          },
+          {
+            "chapter": 8,
+            "aware_of": 1,
+            "unaware_of": 2
+          }
+        ],
+        "lee-seah": [
+          {
+            "chapter": 2,
+            "aware_of": 0,
+            "unaware_of": 0
+          },
+          {
+            "chapter": 3,
+            "aware_of": 0,
+            "unaware_of": 0
+          },
+          {
+            "chapter": 4,
+            "aware_of": 0,
+            "unaware_of": 0
+          },
+          {
+            "chapter": 5,
+            "aware_of": 0,
+            "unaware_of": 0
+          },
+          {
+            "chapter": 6,
+            "aware_of": 0,
+            "unaware_of": 0
+          },
+          {
+            "chapter": 7,
+            "aware_of": 0,
+            "unaware_of": 0
+          },
+          {
+            "chapter": 8,
+            "aware_of": 0,
+            "unaware_of": 0
+          }
+        ]
+      }
+    },
+    "validator": {
+      "available": true,
+      "exit_code": 0,
+      "stdout": "[validate_state] WARN: SP SP-A payoff 계획 재조정: ch7: 7→12 (정상 — 서사 진화)\n[validate_state] 전부 정상 (warnings: 1)",
+      "stderr": ""
+    }
+  },
+  "projection": null
+}

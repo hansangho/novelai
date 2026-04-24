@@ -1,0 +1,19 @@
+chapter: 6
+completed_at: 2026-04-24T11:55:00+09:00
+
+locations:
+  shanghai-concession:
+    status: operational
+    notable_changes: ["조계 동쪽 골목 끝 찻집 — ch6 접선 장소로 활성화"]
+
+  shanghai-office:
+    status: operational
+    notes: ["책상 배치 유지. 이세아가 사무실 근무 중에 도현 단독 외출"]
+
+  jongno-station:
+    status: operational
+    notes: ["박 부장 배후 유지"]
+
+  kim-dohyun-home:
+    status: operational
+    notes: ["수민이 ch5~6 에 편지 수령"]

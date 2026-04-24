@@ -1,0 +1,26 @@
+chapter: 5
+completed_at: 2026-04-24T11:45:00+09:00
+
+locations:
+  shanghai-concession:
+    status: operational
+    controlled_by: 프랑스 공사관 (행정) + 일본 영사관 (파견 관할)
+    notable_changes:
+      - "도현·이세아 임시 사무실 개소 (조계 동쪽 이층 건물)"
+      - "일본 영사관 접수 도장 2개 기록됨"
+    notes:
+      - "ch6~8 주요 무대. 우편·전보 인프라 활용 가능."
+
+  shanghai-office:
+    status: operational
+    notable_changes:
+      - "책상 2개, 찻상 1 구석, 석탄 난로, 붉은빛 벽돌"
+      - "조사 대상 명단 비치 (이름 서류 묶음)"
+
+  jongno-station:
+    status: operational
+    notes: ["ch5 등장 없음 — 박 부장 배후 유지"]
+
+  kim-dohyun-home:
+    status: operational
+    notes: ["ch5 등장 없음"]

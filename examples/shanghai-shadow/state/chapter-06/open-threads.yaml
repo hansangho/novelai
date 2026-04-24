@@ -1,0 +1,29 @@
+chapter: 6
+completed_at: 2026-04-24T11:55:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 6
+    status: open
+    planned_payoff_chapter: 7
+    notes: >-
+      ch6 외부 증언: 박 부장 지난 여름 상하이 방문 + 경성 상관 1인 동행.
+      상하이 명단의 이름 + 이 증언 = ch7 reveal 직전 상태. 3 단서 완비.
+
+  - id: SP-B
+    label: 이세아의 정체
+    opened_at_chapter: 0
+    last_hinted_at_chapter: 6
+    status: open
+    planned_payoff_chapter: 10
+    notes: "사내를 '어디서 본 듯' 발화 — 위장 내 경미한 균열. 즉시 수습."
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 3
+    status: partial
+    planned_payoff_chapter: 9
+    notes: "ch6 변화 없음. 수민은 도현의 편지 1줄을 수령."

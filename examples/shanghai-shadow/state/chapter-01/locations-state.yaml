@@ -1,0 +1,19 @@
+# state/chapter-01/locations-state.yaml
+
+chapter: 1
+completed_at: 2026-04-24T10:57:00+09:00
+
+locations:
+  jongno-station:
+    status: operational
+    controlled_by: 조선총독부 경무국
+    notable_changes: []
+    notes:
+      - "3층 복도·박 부장 집무실·도현 책상 등장"
+      - "내부 유선 수화기 기능 정상"
+
+  kim-dohyun-home:
+    status: operational
+    notable_changes: []
+    notes:
+      - "식탁·책상 첫 등장. 공간 Bible 미작성 — 이후 등장 전 locations/ 추가 권고"

@@ -1,0 +1,13 @@
+# --- novel-writer 플러그인 ---
+# .work/ : Gate 통과 전 임시 스크래치패드
+/.work/
+
+# .session/ 휘발성 상태
+/.session/current.yaml
+/.session/logs/
+
+# Claude Code 개인 설정
+.claude/settings.local.json
+
+# macOS
+.DS_Store

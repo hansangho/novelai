@@ -1,0 +1,22 @@
+chapter: 8
+completed_at: 2026-04-24T12:25:00+09:00
+
+locations:
+  shanghai-office:
+    status: closed       # ch8 종료 시점에 도현·이세아 철수
+    notable_changes: ["서류 중 절반 소각, 절반 봉투에 수거"]
+
+  shanghai-concession:
+    status: operational
+
+  kanbu-ferry:
+    status: operational
+    notes: ["관부연락선 - 역방향 항로 (시모노세키 → 부산). ch4 와 짝."]
+
+  jongno-station:
+    status: operational
+    notes: ["박 부장 배후 유지"]
+
+  kim-dohyun-home:
+    status: operational
+    notes: ["ch9 주요 무대 예정"]

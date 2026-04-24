@@ -1,0 +1,12 @@
+# .session/current.yaml — 휘발성 세션 상태 (Session Manager 관리)
+# 실제 파일은 .gitignore 로 제외 권장. 이 예시만 추적.
+
+session_id: ""             # ISO 8601 일시 (Session Manager 가 생성)
+phase: planning            # planning | research | characters | structure | drafting | revision
+active_chapter: null
+gate_cursor: null
+rewrite_iteration: 0
+last_agent: null
+unresolved_escalations: []
+notes: |
+  /resume 시 이 파일을 읽어 컨텍스트 복원.

@@ -1,0 +1,65 @@
+chapter: 6
+completed_at: 2026-04-24T11:55:00+09:00
+# 서사 내: 1923-02-02 금요일 오전, 상하이 사무실 복귀 직후
+
+characters:
+  kim-dohyun:
+    version: v1-말
+    physical:
+      location: 상하이 조계 임시 사무실
+      injuries: [왼손 검지 흉터 (배경)]
+      fatigue_level: mid
+    emotional:
+      dominant: 가설의 재배열 중 (박 부장 + 상하이 + 이름 3축)
+      toward:
+        park-bujang: 경계 최상
+        lee-seah: 관찰의 무게 더 증가 ("어디서 본 듯" 흘림)
+        sumin: 편지 송신 완료 (01-24 영사관 편)
+    knowledge:
+      aware_of:
+        - (ch1-5 누적 항목 전부 유지)
+        - "**박 부장이 지난 여름 상하이를 방문했으며 경성에서 사복으로 온 상관 한 명과 동행** (외부 증언)"
+        - 상하이 조사 명단의 낯익은 이름 = 박 부장의 1921 회의록 이름 (자체 연결)
+        - 이세아가 제3자 사내를 '어디서 본 듯' 이라고 말했다 (SP-B 균열 단서)
+      unaware_of:
+        - 박 부장의 실제 목적 (동행자가 누구인지, 목적이 이중 공작 커버인지) — ch7 reveal
+        - 이세아의 정체 (ch10 reveal)
+        - 수민이 구체적으로 무엇을 아는지
+    last_dialogue_ref: story/chapters/chapter-06.md#scene-3
+
+  lee-seah:
+    version: v1
+    physical:
+      location: 상하이 사무실
+      fatigue_level: unclear
+    emotional:
+      dominant: (위장 유지 — 순간의 기억 노출 후 즉시 수습)
+    knowledge:
+      aware_of: []
+      unaware_of: []
+    last_dialogue_ref: story/chapters/chapter-06.md#scene-3
+    notes:
+      - "사내를 '어디서 본 듯' 이라는 발화 — 위장 유지 내 허용 수준, 그러나 연속성 기록"
+
+  park-bujang:
+    version: v1
+    physical:
+      location: 경무국 (배경)
+    emotional:
+      dominant: (변화 없음, 이중 공작 진행 중)
+    knowledge:
+      aware_of: [도현이 상하이, 도현이 외부 접촉 여부는 확인 안 됨]
+      unaware_of: [도현이 자신의 상하이 방문 사실을 외부에서 들었음]
+    last_dialogue_ref: story/chapters/chapter-04.md#scene-1
+
+  sumin:
+    version: v1-말
+    physical:
+      location: 경성 자택
+      fatigue_level: unclear
+    emotional:
+      dominant: 소강 + 편지 수령 (약 01-28경 — 영사관 편 5일 후)
+    knowledge:
+      aware_of: [ch3 까지 유지, 아버지가 상하이 도착 알림 편지 수령]
+      unaware_of: [파견 세부]
+    last_dialogue_ref: story/chapters/chapter-03.md#scene-3

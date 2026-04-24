@@ -1,0 +1,27 @@
+# state/chapter-01/relationships.yaml
+
+chapter: 1
+completed_at: 2026-04-24T10:57:00+09:00
+
+relationships:
+  - from: kim-dohyun
+    to:   park-bujang
+    trust: 2
+    intimacy: 1
+    label: 불신 (1921 목격 이후 내면 유지)
+    last_significant_event: 1장 복도 눈 마주침 — 침묵
+
+  - from: kim-dohyun
+    to:   sumin
+    trust: 9
+    intimacy: 6
+    label: 혼자 키운 딸
+    last_significant_event: 1장 저녁 식사 — 두 박자 침묵 / "이름 붙이지 않음"
+
+  - from: sumin
+    to:   kim-dohyun
+    trust: 8        # 내부적으로 의심 시작 (비대칭)
+    intimacy: 6
+    label: 아버지 — 미세한 거리감 시작
+    last_significant_event: 1장 저녁 식사
+    note: "비대칭은 챕터 3 turning point 까지 유지"

@@ -1,0 +1,9 @@
+# state/chapter-NN/relationships.yaml
+# 인물 간 관계 스냅샷. 양방향이 다를 수 있으므로 (a→b) / (b→a) 분리.
+# 스케일: trust 0~10, intimacy 0~10
+# 항목: from, to, trust, intimacy, label, last_significant_event, note(선택)
+
+chapter: 0
+completed_at: null
+
+relationships: []

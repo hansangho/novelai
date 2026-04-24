@@ -1,36 +1,29 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# --- 플러그인 개발 레포 ---
+# 샘플 작품의 .work·휘발성 세션 파일
+/examples/*/.work/
+/examples/*/.session/current.yaml
+/examples/*/.session/logs/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Claude Code 개인 설정
+.claude/settings.local.json
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# macOS
 .DS_Store
-*.pem
 
-# debug
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node (미사용이나 혹시)
+/node_modules
+.pnp
+.pnp.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
+# 환경
 .env*.local
 .env
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts

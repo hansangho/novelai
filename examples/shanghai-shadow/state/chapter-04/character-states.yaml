@@ -1,0 +1,79 @@
+chapter: 4
+completed_at: 2026-04-24T11:30:00+09:00
+# 서사 내: 1923-01-19 금요일 04:30 직후, 관부연락선 선상
+
+characters:
+  kim-dohyun:
+    version: v1-말
+    physical:
+      location: 관부연락선 갑판 / 객실 (부산 출항 직후)
+      injuries: [왼손 검지 오래된 흉터]
+      fatigue_level: high
+    emotional:
+      dominant: 정적 긴장 (편지 미완결 + 박 부장 언어의 어긋남)
+      toward:
+        park-bujang: 경계 강화 (특별히 잘 부탁해 포착)
+        lee-seah: 관찰 지속 (차창 시선)
+        sumin: 미해결 — 편지 못 씀
+    knowledge:
+      aware_of:
+        - 상하이 파견 명령 (공식)
+        - 명령서 1월 11일 결정
+        - 1921년 박 부장 봉투 (배경)
+        - 이세아 존재 + 목례가 박 부장과 닮음 관찰
+        - 수민이 아버지를 의심 (ch3 turning point)
+        - 서랍 수첩 이동 흔적
+        - '**박 부장이 "특별히 잘 부탁해" 라고 말했다** (평소 화법 일탈 — SP-A 간접 단서)'
+      unaware_of:
+        - 수민이 구체적으로 무엇을 아는지
+        - 박 부장 실제 공작 (ch7)
+        - 이세아 정체 (ch10)
+    last_dialogue_ref: story/chapters/chapter-04.md#scene-3
+
+  lee-seah:
+    version: v1
+    physical:
+      location: 관부연락선 갑판
+      fatigue_level: unclear
+    emotional:
+      dominant: (위장 유지)
+      toward: {}
+    knowledge:
+      aware_of: []
+      unaware_of: []
+    last_dialogue_ref: story/chapters/chapter-04.md#scene-3
+    notes:
+      - "차창 밖 '먼 지점' 시선 — 독자에게 미세 단서, 도현은 '감시자의 정적' 정도로만 인식"
+
+  park-bujang:
+    version: v1
+    physical:
+      location: 경무국 (배후 유지)
+    emotional:
+      dominant: (본 챕터 도현 퇴근 후 불명)
+      toward:
+        kim-dohyun: 도구적 + 관찰 강화 가능성
+    knowledge:
+      aware_of:
+        - 도현이 상하이로 출발했음
+        - 도현의 1921 목격 가능성
+      unaware_of:
+        - 이세아 정체
+    last_dialogue_ref: story/chapters/chapter-04.md#scene-1
+
+  sumin:
+    version: v1-말
+    physical:
+      location: 경성 자택 (혼자)
+      fatigue_level: unclear
+    emotional:
+      dominant: 소강 상태 (질문 이후)
+    knowledge:
+      aware_of:
+        - 아버지가 상하이 출장
+        - 아버지가 거짓말을 했다는 것 (ch3)
+      unaware_of:
+        - 상하이 파견의 공식 목적
+    last_dialogue_ref: story/chapters/chapter-03.md#scene-3
+    notes:
+      - "ch9 까지 도현과 직접 상호작용 없음. relationships.yaml 의 trust 7 유지."

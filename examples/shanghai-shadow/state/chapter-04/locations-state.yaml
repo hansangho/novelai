@@ -1,0 +1,24 @@
+chapter: 4
+completed_at: 2026-04-24T11:30:00+09:00
+
+locations:
+  jongno-station:
+    status: operational
+    controlled_by: 조선총독부 경무국
+    notes: ["박 부장 집무실 최종 등장 — 여비 지급"]
+
+  kim-dohyun-home:
+    status: operational
+    notes: ["ch4 등장 없음, 비어 있음 (수민 혼자)"]
+
+  gyeongseong-busan-railway:
+    status: operational
+    notes: ["1923년 시점 정상 운행, 당일 주행"]
+
+  busan-port:
+    status: operational
+    notes: ["관부연락선 출항지 — ch4 만 등장"]
+
+  kanbu-ferry:
+    status: operational
+    notes: ["부산~시모노세키 — 5일 상하이 여정의 첫 구간"]

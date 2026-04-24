@@ -1,0 +1,70 @@
+chapter: 2
+completed_at: 2026-04-24T11:05:00+09:00
+# 서사 내: 1923-01-16 화요일 ~10:00 (짧은 장면)
+
+characters:
+  kim-dohyun:
+    version: v1
+    physical:
+      location: 종로 경찰서 2층 사무실, 본인 책상
+      injuries: [왼손 검지 오래된 흉터 (배경)]
+      fatigue_level: mid
+    emotional:
+      dominant: 경계의 깊어짐 (예감이 구체화)
+      toward:
+        lee-seah: 관찰·거리두기 (초대면)
+        park-bujang: 경계 유지
+        sumin: 애정 유지 (전날 밥상 멈춤은 미해석 상태로 남아 있음)
+    knowledge:
+      aware_of:
+        - 이세아라는 신임 동료 존재 (이름·용모·발소리·눈썹 흉터)
+        - 어제 수령한 상하이 파견 명령
+        - 박 부장·이세아의 목례 각도가 닮았다는 관찰
+      unaware_of:
+        - 이세아의 실제 신분 (챕터 10)
+        - 박 부장 실제 공작 (챕터 7)
+        - 수민 의심 (챕터 3)
+    last_dialogue_ref: story/chapters/chapter-02.md#scene-1
+
+  lee-seah:
+    version: v1
+    physical:
+      location: 종로 경찰서 2층 사무실, 도현 옆 두 걸음 반 책상
+      fatigue_level: unclear
+    emotional:
+      dominant: (위장 유지) 차분·실무
+      toward:
+        kim-dohyun: 관찰 대상 (Bible 배경)
+    knowledge:
+      aware_of: []      # POV 가 도현이므로 노출 없음 — Bible 의 "내면 봉인" 규칙 준수
+      unaware_of: []
+    last_dialogue_ref: story/chapters/chapter-02.md#scene-1
+    notes:
+      - "대사 1문장, 행동 몇 개로만 등장. 내면 0."
+      - "도현은 이 인물의 진짜 이름·소속을 챕터 10까지 모른다. 본 파일의 aware_of 도 빈 상태 유지."
+
+  park-bujang:
+    version: v1
+    physical:
+      location: 불명 (챕터 2 등장 없음)
+    emotional:
+      dominant: (변화 없음)
+      toward:
+        kim-dohyun: 도구적
+    knowledge:
+      aware_of: [도현의 1921년 목격 가능성, 파견 내정 사실]
+      unaware_of: [이세아의 실제 신분]
+    last_dialogue_ref: story/chapters/chapter-01.md#scene-2
+
+  sumin:
+    version: v1
+    physical:
+      location: 불명 (챕터 2 등장 없음)
+    emotional:
+      dominant: (내부적으로 의심 지속 — 서사 배경)
+      toward:
+        kim-dohyun: 애정 유지 / 표현 억제
+    knowledge:
+      aware_of: []
+      unaware_of: []
+    last_dialogue_ref: story/chapters/chapter-01.md#scene-3

@@ -1,0 +1,21 @@
+chapter: 7
+completed_at: 2026-04-24T12:15:00+09:00
+
+locations:
+  shanghai-concession:
+    status: operational
+    notable_changes: ["영사관 기록실 — 1922년 8월 명부가 조사 기점으로 확정"]
+
+  shanghai-office:
+    status: operational
+
+  shanghai-consulate-records:
+    status: operational
+    notes: ["ch7 에서 신규 활성화. 1922년 하반기 방문자 명부 보유. 도현 접근 기록 남음 (서기 목격)"]
+
+  jongno-station:
+    status: operational
+    notes: ["박 부장 배후 유지, v2 arc 진입"]
+
+  kim-dohyun-home:
+    status: operational

@@ -1,0 +1,10 @@
+# state/chapter-NN/open-threads.yaml
+# 아직 회수되지 않은 서브플롯·떡밥·약속.
+# /timeline --unresolved 가 전 챕터의 본 파일들을 aggregate 한다.
+# 항목: id (SP-A 식), label, opened_at_chapter, last_hinted_at_chapter,
+#       status (open | partial | closed), planned_payoff_chapter, notes
+
+chapter: 0
+completed_at: null
+
+threads: []

@@ -1,0 +1,31 @@
+chapter: 3
+completed_at: 2026-04-24T11:20:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작 (상하이 파견의 진짜 목적)
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 2
+    status: open
+    planned_payoff_chapter: 7
+    notes: >-
+      ch3 에서는 추가 단서 없음. 다음 단서는 ch4 (박 부장 "특별히 잘 부탁해") 예정.
+
+  - id: SP-B
+    label: 이세아의 정체 (의열단 잠입)
+    opened_at_chapter: 0
+    last_hinted_at_chapter: 2
+    status: open
+    planned_payoff_chapter: 10
+    notes: >-
+      ch3 에서는 이세아의 짧은 "네, 알겠습니다." 한 마디만 등장. 위장 유지.
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 3      # 도현이 자각 — 첫 turning point 완료
+    status: partial                 # open → partial (도현이 의심의 존재를 알게 됨, 구체는 모름)
+    planned_payoff_chapter: 9
+    notes: >-
+      ch3 turning point 달성: 도현이 "딸이 무언가 의심한다" 는 사실을 알게 됨.
+      단 구체 내용(1921 급여 명세서) 은 여전히 unaware. ch9 에서 정면 충돌 예정.

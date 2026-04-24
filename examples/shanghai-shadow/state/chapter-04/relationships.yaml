@@ -1,0 +1,35 @@
+chapter: 4
+completed_at: 2026-04-24T11:30:00+09:00
+
+relationships:
+  - from: kim-dohyun
+    to:   park-bujang
+    trust: 1              # ch3 2 → ch4 1 (특별히 잘 부탁해 포착 후)
+    intimacy: 1
+    label: 경계 강화
+    last_significant_event: 4장 박 부장 집무실 "특별히 잘 부탁해"
+
+  - from: kim-dohyun
+    to:   sumin
+    trust: 9
+    intimacy: 6
+    label: 거리감 자각 + 편지 미완결
+
+  - from: sumin
+    to:   kim-dohyun
+    trust: 7
+    intimacy: 6
+    label: 아버지 부재 — 질문을 마친 뒤의 소강
+    last_significant_event: 3장 저녁
+
+  - from: kim-dohyun
+    to:   lee-seah
+    trust: 3
+    intimacy: 2
+    label: 관찰 지속 (차창 시선)
+
+  - from: lee-seah
+    to:   kim-dohyun
+    trust: 6
+    intimacy: 3
+    label: 위장 유지

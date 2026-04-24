@@ -1,0 +1,68 @@
+chapter: 7
+completed_at: 2026-04-24T12:15:00+09:00
+# 서사 내: 1923-02-15 목요일 정오, 상하이 골목 귀가길
+
+characters:
+  kim-dohyun:
+    version: v2          # ★ Midpoint Reversal 이후 arc v2 전환
+    physical:
+      location: 상하이 조계 골목 (영사관 → 사무실)
+      injuries: [왼손 검지 흉터 (배경, 시큰거림)]
+      fatigue_level: mid
+    emotional:
+      dominant: 세계 기울어짐 (바닥이 한 번 기울음)
+      toward:
+        park-bujang: 경계 최상 + 결정적 증거 확보
+        lee-seah: 의심 씨앗 (증거 없음, 이름만 한 번 얹었다 밀어냄)
+        sumin: 배경 유지 (편지 1줄 이후 소식 없음)
+    knowledge:
+      aware_of:
+        - (ch1-6 누적 항목 유지)
+        - '**박 부장이 1922년 8월 상하이 영사관 기록에 "협력자" 이름과 함께 등재됨** (ch7 reveal, SP-A 해결)'
+        - 협력자의 이름이 의열단 조력자 가명 = 박 부장은 의열단과 연결됨
+        - 자기 파견 명령이 박 부장 접촉 커버 작업이라는 구조적 인식
+        - 이세아에 대해 "이름을 얹었다가 밀어낸" 의심의 존재 (행동 없이 보류)
+      unaware_of:
+        - 박 부장이 어느 편을 속이고 있는지 (양쪽 모두 속일 가능성 포함)
+        - 이세아의 실제 신분 (ch10)
+        - 수민 구체 지식
+    last_dialogue_ref: story/chapters/chapter-07.md#scene-1
+    notes:
+      - "arc v1 말 → v2 전환. Bible kim-dohyun.md 의 v2 설명 '자기 비밀이 드러날 위기 속에서 선택의 순간' 단계 진입."
+
+  lee-seah:
+    version: v1          # 아직 v1 유지 (ch10 reveal 시 v2)
+    physical:
+      location: 영사관 → 사무실 (도현과 함께)
+      fatigue_level: unclear
+    emotional:
+      dominant: (위장 유지)
+    knowledge:
+      aware_of: []
+      unaware_of: []
+    last_dialogue_ref: story/chapters/chapter-07.md#scene-1
+    notes:
+      - "도현의 명부 열람을 옆에서 목격 — 위장 유지. 내면 공개 0."
+
+  park-bujang:
+    version: v2          # ★ 도현이 박 부장을 이중 공작원으로 판단한 시점부터 Bible 의 park-bujang.md v2 arc 발동
+    physical:
+      location: 경무국 (배경, 도현 동선과 별개)
+    emotional:
+      dominant: (본 시점 불명 — 도현 가설)
+      toward: { kim-dohyun: 도구적 + 이제 위험 대상 가능성 }
+    knowledge:
+      aware_of: [도현이 상하이 체류, 도현의 수사 진행]
+      unaware_of: [도현이 영사관 기록실에서 자신의 이름을 찾아냈다는 사실, 이세아 정체]
+    last_dialogue_ref: story/chapters/chapter-04.md#scene-1
+    notes:
+      - "실제 의도/목적은 ch8 이후에서 서서히 드러날 예정."
+
+  sumin:
+    version: v1-말
+    physical: { location: 경성 자택, fatigue_level: unclear }
+    emotional: { dominant: 소강 지속 }
+    knowledge:
+      aware_of: [아버지 첫 편지 수령, ch3 의 질문 이후 답변 미결]
+      unaware_of: [파견 세부·박 부장 관계]
+    last_dialogue_ref: story/chapters/chapter-03.md#scene-3
