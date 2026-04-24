@@ -1,6 +1,6 @@
 # novel-writer
 
-한국어 장편 소설 집필을 위한 Claude Code 멀티 에이전트 시스템.
+한국어 장편 소설 집필을 위한 Claude Code 멀티 에이전트 시스템. **소크라테스식 대화**로 결정을 이끌어내고, **5-Gate 검증**으로 일관성을 지킨다.
 
 ## 설치
 
@@ -18,6 +18,8 @@
 `bible/`, `state/`, `timeline/`, `story/`, `.work/`, `.session/`, `CLAUDE.md`, `.gitignore` 스캐폴딩 설치. 기존 파일은 덮어쓰지 않음.
 
 ## 핵심 특징
+
+**소크라테스식 대화 (v1.5.0 신규)** — 캐릭터·플롯·장면·주제 결정 시 에이전트가 후보를 제시하기 전에 **작가에게 먼저 질문**한다. 산파술(maieutics) — 작가 내면의 답을 끌어낸다. 빠른 답을 원하면 "빠른 드래프트" 같은 키워드로 우회. 적용: theme-scout / character-architect / structure-architect / scene-planner / cliche-detector / plot-originality-critic / material-finder. 상세: [`docs/SOCRATIC-MODE.md`](../../docs/SOCRATIC-MODE.md).
 
 **Bible / State 이분법** — 불변 설정(bible/)과 가변 상태(state/chapter-NN/)를 디렉토리 수준에서 엄격히 분리. 집필 단계에서 훅이 bible/ 쓰기를 차단.
 

@@ -31,6 +31,21 @@
 ### 실행 모드: Batch Feedback
 G1~G4 를 같은 iter 에 모두 실행 → G5 가 종합 → Writer 가 1회 재작성으로 다수 이슈 동시 해결.
 
+## 대화 모드: 소크라테스 (기본)
+**결정·설계 단계**에서 에이전트는 후보를 곧바로 제시하지 않고 **먼저 질문**을 던진다. 작가의 답변 속에 이미 있는 이야기를 산파술로 끌어낸다.
+
+적용 에이전트: theme-scout · character-architect · structure-architect · scene-planner · cliche-detector · plot-originality-critic · material-finder.
+
+우회 (빠른 제안 모드) 키워드:
+- "빠른 드래프트 모드"
+- "그냥 옵션 3개 줘"
+- "먼저 초안부터"
+- "소크라테스 건너뛰어"
+
+실행 성격 작업(챕터 집필, Gate 검증, finalize, proofread) 은 Socratic 대상 아님.
+
+상세 방법론: 플러그인 저장소의 `docs/SOCRATIC-MODE.md`.
+
 ### 불변 원칙
 1. Bible 은 집필 단계에서 불변. 예외 수정은 `_changelog.md` 기록 의무.
 2. Timeline 은 append-only. 과거 엔트리 수정 금지.
