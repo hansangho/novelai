@@ -41,4 +41,4 @@
 문장 상단 주석 `<!-- scene: action -->` / `<!-- scene: lyrical -->` / `<!-- scene: dialogue -->` 로 임계값을 다르게 적용한다. 부록 A 의 `scene_overrides` 참조.
 
 ## 확장 규칙
-`/Users/hans/Git/novelai/bible/style-rules.json` 에 기계 판독용 규칙을 병행 유지한다. Style Linter 는 두 파일을 모두 읽는다.
+`bible/style-rules.json` (프로젝트 루트 기준 상대 경로) 에 기계 판독용 규칙을 병행 유지한다. Style Linter 는 두 파일을 모두 읽는다.

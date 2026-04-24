@@ -9,7 +9,7 @@
       "name": "novel-writer",
       "source": "./plugins/novel-writer",
       "description": "한국어 장편 소설 집필 멀티 에이전트 시스템 (PRD v1.4)",
-      "version": "1.5.0"
+      "version": "1.5.1"
     }
   ]
 }
