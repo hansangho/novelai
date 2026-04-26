@@ -234,6 +234,14 @@ Claude 에게 한국어로 그냥 말하세요:
 
 ### 5.4. 구조 설계 (`bible/structure.md` + `story/plan.md`)
 
+> 💡 **플롯 아키타입 카탈로그**: 작품의 형태가 어떤 익숙한 패턴에 가까운지 알면 함정을 피하기 쉽습니다.
+> ```
+> /plot-types
+> ```
+> → 30 종 한눈에. 키워드 검색·장르별·결합 권고도 가능 (`/plot-types 추리`, `/plot-types --genre 역사`, `/plot-types --combine 추리 비밀`).
+> Structure Architect 가 작가의 답변을 듣고 자동으로 메인·보조 아키타입을 매칭해 줍니다.
+
+
 ```
 전체 플롯 같이 잡아보자.
 ```
@@ -348,6 +356,7 @@ claude
 | **편집자에 전달** | `/export --format docx --include-meta` |
 | **공모전 제출용 PDF** | `/export --format pdf --strip-comments` |
 | **시각화 산출물** | `/visualize` (mermaid 관계도·SP 추적·timeline HTML) |
+| **플롯 아키타입 조회** | `/plot-types` (전체) / `/plot-types 추리` (검색) / `/plot-types --genre 미스터리` / `/plot-types --combine 추리 비밀` |
 | Bible 수정 | `/bible-unlock <사유>` → 수정 → `/bible-lock` |
 | 사용 가능 명령 보기 | `/help` |
 

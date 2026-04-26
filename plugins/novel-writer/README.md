@@ -36,7 +36,7 @@
 
 **Timeline append-only** — 확정 사건을 시간순 누적. 장편에서 "언제 누가 뭘 했더라" 검색 가능 (`/timeline kim-dohyun`, `/timeline --unresolved` 등).
 
-## 17 슬래시 커맨드
+## 18 슬래시 커맨드
 
 | 커맨드 | 용도 |
 |--------|------|
@@ -56,6 +56,7 @@
 | `/metrics [--cost \| --project N \| --json]` | 지표 리포트 + 비용 추정 |
 | `/export [--format md\|epub\|pdf\|docx]` | 챕터 통합·내보내기 |
 | `/visualize` | 인물 관계 mermaid·SP 추적·timeline HTML |
+| `/plot-types [검색어 \| --genre \| --combine A B]` | 30종 플롯 아키타입 카탈로그 |
 
 ## 21 서브에이전트
 
