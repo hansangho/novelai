@@ -78,8 +78,10 @@
 
 ## 상세 가이드
 
-- [TUTORIAL.md](../../docs/TUTORIAL.md) — 빈 폴더 → 챕터 1 확정 30~60분 walkthrough
+- 🌱 [작가용-사용법.md](../../docs/작가용-사용법.md) — **터미널·git 처음이어도 따라할 수 있는** 비개발자 작가용 안내
+- 🛠️ [TUTORIAL.md](../../docs/TUTORIAL.md) — 익숙한 사용자용 30~60분 walkthrough
 - [PRD v1.4](../../docs/novel-writing-agent-prd-v1.4.docx) — 원본 설계 명세
+- [SOCRATIC-MODE.md](../../docs/SOCRATIC-MODE.md) — 소크라테스식 대화 방법론
 - [파일럿 01 회고](../../docs/pilot-01-retrospective.md) — 2 챕터 스모크
 - [파일럿 02 회고](../../docs/pilot-02-long-form-retrospective.md) — 8 챕터 누적 비대 검증
 

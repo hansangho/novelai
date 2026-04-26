@@ -30,7 +30,8 @@
 
 ### 튜토리얼
 
-30~60분 walkthrough: [docs/TUTORIAL.md](docs/TUTORIAL.md) — 빈 폴더 → 챕터 1 확정까지.
+- 🌱 **개발 지식이 없는 작가용**: [`docs/작가용-사용법.md`](docs/작가용-사용법.md) — 터미널이 처음이어도 따라할 수 있는 안내. 비유와 단계별 설명 위주.
+- 🛠️ **개발자·익숙한 사용자용**: [`docs/TUTORIAL.md`](docs/TUTORIAL.md) — 빈 폴더 → 챕터 1 확정까지 30~60분 walkthrough.
 
 ### 스크린샷 · 데모
 
@@ -187,4 +188,4 @@ CLAUDE_PROJECT_DIR=$(pwd) CLAUDE_PLUGIN_ROOT=../../plugins/novel-writer \
 - Bible/State/Gate/Perplexity/Timeline 개념 차용: Thomas Houssin *Claude Book* (MIT)
 
 ## 문의
-hansangho@ncsoft.com
+hansanghoo@gmail.com
