@@ -358,11 +358,75 @@ def render_text(m: dict, projection: dict | None) -> str:
 
 # ---------- 메인 ----------
 
+def estimate_cost(metrics: dict, model: str = "sonnet") -> dict:
+    """챕터당 평균 토큰 사용량과 모델별 단가로 비용 추정.
+
+    Claude API 단가 (2026 기준 추정 — 변동 가능):
+    - opus:    $15 / 1M input, $75 / 1M output
+    - sonnet:  $3  / 1M input, $15 / 1M output
+    - haiku:   $0.25/ 1M input, $1.25/ 1M output
+
+    가정 (실제 측정 아닌 휴리스틱):
+    - 챕터당 토큰: input ≈ (Bible + State + Timeline + 입력 컨텍스트) / 3 (대략 3 글자 = 1 토큰)
+    - output ≈ (챕터 본문 + Gate 5 리포트) / 3
+    - Gate 5 회 호출 + 재작성 평균 0.5 회 → 토큰 ×1.5
+    """
+    pricing = {
+        "opus":   {"input_per_1m": 15.00, "output_per_1m": 75.00},
+        "sonnet": {"input_per_1m":  3.00, "output_per_1m": 15.00},
+        "haiku":  {"input_per_1m":  0.25, "output_per_1m":  1.25},
+    }
+    if model not in pricing:
+        return {"available": False, "reason": f"unknown model: {model}"}
+
+    bible_chars   = metrics["bible"].get("total_bytes", 0) if metrics["bible"].get("exists") else 0
+    timeline_chars = metrics["timeline"].get("total_bytes", 0) if metrics["timeline"].get("exists") else 0
+    avg_state = (
+        sum(s["total_bytes"] for s in metrics["state_sizes"]) / len(metrics["state_sizes"])
+        if metrics["state_sizes"] else 0
+    )
+    story_count = metrics["story"]["count"]
+    avg_chapter_chars = (metrics["story"]["total_chars"] / story_count) if story_count else 3000
+
+    # 1 챕터 입력 토큰 추정 (대략적)
+    input_chars = bible_chars + timeline_chars + avg_state + avg_chapter_chars  # 컨텍스트 + 직전 챕터
+    output_chars = avg_chapter_chars + 5 * 800  # 본문 + Gate 5 리포트 (각 ~800자)
+
+    # 한국어 → 토큰 환산: 약 1.5 ~ 2 글자 / 1 토큰 (영어 4:1 보다 빡빡)
+    input_tokens = input_chars / 1.7
+    output_tokens = output_chars / 1.7
+
+    # 재작성 가중치 (현재 평균)
+    avg_rewrites = metrics["gate_stats"].get("avg_rewrites_per_chapter", 0.5) if metrics["gate_stats"].get("exists") else 0.5
+    multiplier = 1 + avg_rewrites * 0.5  # 재작성 1회당 +50%
+
+    input_tokens *= multiplier
+    output_tokens *= multiplier
+
+    p = pricing[model]
+    cost_per_chapter = (input_tokens / 1_000_000) * p["input_per_1m"] + (output_tokens / 1_000_000) * p["output_per_1m"]
+
+    return {
+        "available": True,
+        "model": model,
+        "pricing": p,
+        "estimated_input_tokens_per_chapter": int(input_tokens),
+        "estimated_output_tokens_per_chapter": int(output_tokens),
+        "rewrite_multiplier": round(multiplier, 2),
+        "cost_per_chapter_usd": round(cost_per_chapter, 3),
+        "cost_per_chapter_krw": round(cost_per_chapter * 1380, 0),  # 환율 ~1380 (가정)
+        "warning": "휴리스틱 추정. 실제 비용은 Anthropic API 대시보드 기준. 환율·단가는 변동 가능.",
+    }
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", action="store_true", help="기계 판독 출력")
     ap.add_argument("--chapter", type=int, help="단일 챕터만 (일부 섹션 필터)")
     ap.add_argument("--project", type=int, help="N 챕터 시의 추정 크기 계산")
+    ap.add_argument("--cost", action="store_true", help="챕터당 비용 추정 표시")
+    ap.add_argument("--model", default="sonnet", choices=["opus", "sonnet", "haiku"],
+                    help="비용 추정 모델 (기본: sonnet)")
     args = ap.parse_args()
 
     metrics = {
@@ -386,12 +450,24 @@ def main() -> int:
             metrics["timeline"]["per_chapter"] = [c for c in metrics["timeline"]["per_chapter"] if c["chapter"] == ch]
 
     projection = project_to(args.project, metrics) if args.project else None
+    cost = estimate_cost(metrics, args.model) if args.cost else None
 
     if args.json:
-        out = {"metrics": metrics, "projection": projection}
+        out = {"metrics": metrics, "projection": projection, "cost": cost}
         print(json.dumps(out, ensure_ascii=False, indent=2))
     else:
         print(render_text(metrics, projection))
+        if cost and cost.get("available"):
+            print(f"### 비용 추정 — 모델 {cost['model']} (휴리스틱)")
+            print(f"- 챕터당 입력 토큰: ~{cost['estimated_input_tokens_per_chapter']:,}")
+            print(f"- 챕터당 출력 토큰: ~{cost['estimated_output_tokens_per_chapter']:,}")
+            print(f"- 재작성 배수: ×{cost['rewrite_multiplier']}")
+            print(f"- 챕터당 비용: 약 ${cost['cost_per_chapter_usd']} / ₩{cost['cost_per_chapter_krw']:,.0f}")
+            if args.project:
+                total_usd = cost['cost_per_chapter_usd'] * args.project
+                print(f"- {args.project} 챕터 총 추정: 약 ${total_usd:.2f} / ₩{total_usd*1380:,.0f}")
+            print(f"- ⚠ {cost['warning']}")
+            print()
 
     gate = metrics["gate_stats"]
     if gate.get("exists") and gate["max_rewrites"] > 3:

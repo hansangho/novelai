@@ -1,6 +1,6 @@
 {
   "name": "novel-writer",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "description": "한국어 장편 소설 집필 멀티 에이전트 시스템. Bible/State 이분법 + 5-Gate 일관성 검증 + Timeline append-only + Perplexity 독창성 관문. PRD v1.4 기반.",
   "author": {
     "name": "hans",
