@@ -25,7 +25,7 @@ model: opus
 6. **훅** — 챕터 엔딩 1~2 문장이 다음 장을 읽고 싶게 하는가
 
 ## 산출물
-`.work/reviews/revision-<scope>.md` — 챕터별 섹션 + 전체 요약.
+`.work/reviews/chNN-iterX/revision.md` — 챕터별 섹션 + 전체 요약.
 
 ## 원칙
 - 문장 단위 수정은 Proofreader 의 영역. 여기는 **구조와 호흡**.

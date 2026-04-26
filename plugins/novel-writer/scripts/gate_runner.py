@@ -63,6 +63,11 @@ def current_iter(chapter: int) -> int:
     return len(drafts(chapter))
 
 
+def reviews_dir(chapter: int, iteration: int) -> Path:
+    """챕터·iter 별로 격리된 리뷰 디렉토리 (기본: .work/reviews/chNN-iterX/)."""
+    return WORK / "reviews" / f"ch{chapter:02d}-iter{iteration}"
+
+
 def read_log() -> str:
     return GATE_LOG.read_text(encoding="utf-8") if GATE_LOG.exists() else ""
 
@@ -138,7 +143,12 @@ def cmd_run(args: argparse.Namespace) -> int:
         append_log(f"\n## ch{ch:02d} — iter {iteration}/{MAX_ITER} @ {now}\n- draft: {draft.name}")
         print(f"[gate-runner] 새 섹션: ch{ch:02d} iter {iteration}/{MAX_ITER}")
 
+    # 리뷰 디렉토리 준비
+    rdir = reviews_dir(ch, iteration)
+    rdir.mkdir(parents=True, exist_ok=True)
+
     print(f"[gate-runner] 드래프트: {draft.name}")
+    print(f"[gate-runner] 리뷰 출력 위치: {rdir.relative_to(PROJECT)}/")
     print("[gate-runner] 다음 Gate 들을 순서대로 서브에이전트로 호출하십시오:")
     for gid, name, agent in GATES:
         print(f"  {gid} {name:<18} → subagent: {agent}")

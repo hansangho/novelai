@@ -24,7 +24,7 @@ PRD v1.4 §1.1 ~ §7. 캐릭터 **내면** 레이어 담당.
 6. **금기** — Bible 의 "이 캐릭터가 절대 하지 않을 것" 위반?
 
 ## 출력
-`.work/reviews/character-review.md`
+`.work/reviews/chNN-iterX/character-review.md`
 
 ## 출력 형식
 ```md

@@ -35,7 +35,7 @@ model: sonnet
 | 🔴 cliche   | 수많은 작품에서 반복된 틀, 변주 없으면 독자 이탈 |
 
 ## 산출물
-`.work/reviews/cliche-report.md`
+`.work/reviews/chNN-iterX/cliche-report.md`
 
 ## 출력 예
 ```md

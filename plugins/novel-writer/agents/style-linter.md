@@ -15,7 +15,7 @@ PRD v1.4 §4.2.
 - `bible/style-rules.json` (기계 판독 규칙)
 
 ## 출력
-`.work/reviews/style-lint.md`
+`.work/reviews/chNN-iterX/style-lint.md`
 
 ## 검사 항목 (강제)
 1. **금지 어휘** (`forbidden_phrases`) — 라인 번호 + 원문 + 교체 제안

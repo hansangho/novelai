@@ -19,7 +19,7 @@ model: sonnet
 `story/chapters/*.md` 확정본.
 
 ## 산출물
-`.work/reviews/proofread-chNN.md` — 원문 라인 + 교정안 + 규칙 근거.
+`.work/reviews/chNN-iterX/proofread.md` — 원문 라인 + 교정안 + 규칙 근거.
 
 ## 원칙
 - **의미를 바꾸지 말 것.** 오탈자·어법만.

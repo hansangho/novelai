@@ -23,11 +23,11 @@ allowed-tools: Read, Write, Edit, Bash, Task, TodoWrite, Glob, Grep
    - G1~G4 를 한 iter 에 모두 실행해 전체 피드백을 수집한 뒤, G5 Integration 이 종합해 Writer 에게 한 번에 돌려준다.
    - PRD §3.3 의 strict fail-fast 와의 차이: 재작성 전에 모든 관점의 피드백이 쌓여 1회 재작성 안에서 더 많은 이슈를 동시 해결 (파일럿 결과로 채택).
    - 병렬 호출 가능 — G1~G4 는 서로 독립. Task 도구를 한 턴에 4개 발행해도 안전.
-   - G1 `style-linter` → `.work/reviews/style-lint.md`
-   - G2 `character-consistency-guardian` → `.work/reviews/character-review.md`
-   - G3 `continuity-reviewer` → `.work/reviews/continuity-review.md`
-   - G4 `perplexity-analyzer` → `.work/reviews/perplexity-report.md` (선택적 통과)
-   - G5 `writing-director` (본인이 Integration) → `.work/reviews/integration.md`
+   - G1 `style-linter` → `.work/reviews/chNN-iterX/style-lint.md`
+   - G2 `character-consistency-guardian` → `.work/reviews/chNN-iterX/character-review.md`
+   - G3 `continuity-reviewer` → `.work/reviews/chNN-iterX/continuity-review.md`
+   - G4 `perplexity-analyzer` → `.work/reviews/chNN-iterX/perplexity-report.md` (선택적 통과)
+   - G5 `writing-director` (본인이 Integration) → `.work/reviews/chNN-iterX/integration.md`
    - 각 Gate 결과는 `gate_runner.py record` 로 기록
 7. 모든 Gate PASS 시 작가에게 확인 요청 → 승인 후 `gate_runner.py finalize --chapter $ARGUMENTS` 실행.
 8. `state-updater` 서브에이전트 호출 → state/chapter-NN/ + timeline/history.md 갱신.

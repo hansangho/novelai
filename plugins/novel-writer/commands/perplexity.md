@@ -12,7 +12,7 @@ allowed-tools: Read, Write, Task, Bash
 1. 숫자면 `.work/writer-draft-ch{NN}-v*.md` 중 가장 최근 버전 선택.
 2. 파일 경로면 그대로 사용.
 3. `perplexity-analyzer` 서브에이전트 호출.
-4. 결과를 `.work/reviews/perplexity-report.md` 에 기록.
+4. 결과를 `.work/reviews/chNN-iterX/perplexity-report.md` 에 기록.
 5. 요약 출력: 플래그 수, 상위 5문장.
 6. 작가 선택 대화:
    - 각 플래그에 대해 `수용` / `재작성` / `이 문장 통과` / `이 챕터 통과`.

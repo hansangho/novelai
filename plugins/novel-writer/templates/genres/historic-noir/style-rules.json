@@ -1,0 +1,27 @@
+{
+  "$schema": "../../bible/style-rules.schema.json",
+  "version": "1.6-historic-noir",
+  "_doc": "역사 느와르 장르 프리셋. 차가운 톤·짧은 호흡·당대 어휘 권장. 기본 룰 + 장르 추가 규칙.",
+
+  "_extends": "../../bible/style-rules.json",
+
+  "scene_overrides": {
+    "action":    { "target_range": [4, 12] },
+    "lyrical":   { "target_range": [18, 35] },
+    "dialogue":  { "target_range": [3, 25] },
+    "interior":  { "target_range": [12, 30] }
+  },
+
+  "ai_slop_patterns_genre": [
+    { "pattern": "갱스터", "reason": "역사 느와르에 부적합한 외래어 — 당대 표현으로", "severity": "warn" },
+    { "pattern": "쿨하게", "reason": "현대 외래어", "severity": "warn" },
+    { "pattern": "그는 차가운 미소를 지었다", "reason": "느와르 클리셰", "severity": "warn" },
+    { "pattern": "그림자가 짙게 드리워졌다", "reason": "장르 클리셰", "severity": "warn" }
+  ],
+
+  "preferred_tone": [
+    "절제된 묘사",
+    "단문 위주",
+    "감정 직접 서술 자제 — 행동·환경으로 보여주기"
+  ]
+}

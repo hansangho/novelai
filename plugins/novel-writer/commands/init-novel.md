@@ -1,14 +1,25 @@
 ---
-description: 새 소설 프로젝트에 novel-writer 스캐폴딩을 설치한다. Bible·State·Timeline·Story·Work·Session·CLAUDE.md 템플릿 복사.
+description: 새 소설 프로젝트에 novel-writer 스캐폴딩을 설치한다. 장르 옵션 지원. /init-novel [historic-noir|urban-fantasy|web-novel|sf]
+argument-hint: "[장르]"
 allowed-tools: Bash, Read
 ---
 
 # /init-novel
 
+입력: `$ARGUMENTS` (선택 — 장르)
+
 ## 실행
 ```
-python3 ${CLAUDE_PLUGIN_ROOT}/scripts/init_novel.py
+python3 ${CLAUDE_PLUGIN_ROOT}/scripts/init_novel.py $ARGUMENTS
 ```
+
+## 지원 장르
+- `historic-noir` — 1900~1950 시대극 + 누아르 (느와르 톤·당대 어휘)
+- `urban-fantasy` — 현대 한국 + 초자연 (능력 비용·일관성 중시)
+- `web-novel`     — 웹소설 (회귀·헌터·로판) — 짧은 문장·빠른 템포·후킹
+- `sf`            — 하드 SF·스페이스 오페라 (기술 일관성·트로프 변주)
+
+장르 미지정 시 generic 템플릿만 설치 — 사용자가 자유롭게 채움.
 
 ## 수행
 - `${CLAUDE_PROJECT_DIR}` 에 `bible/`, `state/`, `timeline/`, `story/`, `research/`, `.work/`, `.session/`, `CLAUDE.md` 스캐폴딩 복사

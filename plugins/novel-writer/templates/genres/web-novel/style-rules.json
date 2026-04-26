@@ -1,0 +1,32 @@
+{
+  "$schema": "../../bible/style-rules.schema.json",
+  "version": "1.6-web-novel",
+  "_doc": "웹소설 (회귀물·헌터물·로맨스판타지 등) 프리셋. 짧은 문장·빠른 템포·후킹 강조. 기본 룰 일부 완화.",
+
+  "_extends": "../../bible/style-rules.json",
+
+  "sentence_length": {
+    "target_range": [8, 20],
+    "max_consecutive_long": 2,
+    "max_consecutive_short": 8
+  },
+
+  "scene_overrides": {
+    "action":    { "target_range": [3, 10] },
+    "lyrical":   { "target_range": [12, 25] },
+    "dialogue":  { "target_range": [2, 20] },
+    "interior":  { "target_range": [5, 18] }
+  },
+
+  "_relaxed": [
+    "ai_openings 일부 허용 — 웹소설 챕터 시작은 후킹이 우선",
+    "감정 직접 서술 (심장이 뛰었다 등) 일부 허용 — 빠른 템포에 적합"
+  ],
+
+  "ai_slop_patterns_genre": [
+    { "pattern": "그는 미소 지었다\\.", "reason": "단순 종결 — 행동 후속 권장", "severity": "warn" },
+    { "pattern": "그러나 그것은 시작에 불과했다", "reason": "웹소설 클리셰 — 무절제한 사용 자제", "severity": "warn" }
+  ],
+
+  "_recommended_chapter_length": "한 챕터 2,500~5,000 자 (웹 연재 표준)"
+}

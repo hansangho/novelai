@@ -12,7 +12,7 @@ allowed-tools: Read, Write, Bash, Task, Glob
 1. 현재 드래프트 iter 확인. 없으면 "`.work/writer-draft-ch{NN}-v1.md` 가 필요합니다" 안내 후 종료.
 2. 반복 (최대 3회 or PASS 까지):
    - G1~G4 를 Batch Feedback 모드로 병렬 호출 (결과 `.work/reviews/*.md`).
-   - G5 `writing-director` 가 전 리뷰를 종합 → `.work/reviews/integration.md`.
+   - G5 `writing-director` 가 전 리뷰를 종합 → `.work/reviews/chNN-iterX/integration.md`.
    - 모든 핵심 Gate(G1~G3, G5) PASS → 루프 탈출 (G4 는 선택적, WARN 허용).
    - 하나라도 FAIL → `chapter-writer` 를 Task 로 호출해 v{iter+1} 생성.
 3. 3회 초과 FAIL → **작가 에스컬레이션**:

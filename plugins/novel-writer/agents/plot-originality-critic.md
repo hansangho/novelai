@@ -39,7 +39,7 @@ PRD §8 의 3단 독창성 검증 중 **플롯 층**.
 3. 대안 경로 — 같은 감정·기능을 다르게 구현할 방법 3
 
 ## 산출물
-`.work/reviews/plot-originality.md`
+`.work/reviews/chNN-iterX/plot-originality.md`
 
 ## 주의
 - "독창성" 이 자체 목적은 아니다. 독자 기대를 부수는 것과 부서뜨린 것을 혼동하지 말 것.

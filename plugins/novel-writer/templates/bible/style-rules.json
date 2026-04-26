@@ -1,31 +1,110 @@
 {
   "$schema": "./style-rules.schema.json",
-  "version": "1.4",
+  "version": "1.6",
+  "_doc": "Style Linter (Gate G1) 가 기계적으로 검사하는 규칙. severity: error → FAIL, warn → WARN. 작품에 맞춰 자유롭게 추가·완화하라.",
+
   "forbidden_phrases": [
-    { "pattern": "그러나", "suggestion": "그런데|하지만", "severity": "warn" },
-    { "pattern": "~의 것이다", "reason": "번역투", "severity": "warn" },
-    { "pattern": "ㅎㅎ", "severity": "error" }
+    { "pattern": "그러나", "suggestion": "그런데|하지만", "reason": "딱딱한 접속사", "severity": "warn" },
+    { "pattern": "~의 것이다", "reason": "번역투 (영어 of 직역)", "severity": "warn" },
+    { "pattern": "~인 것이다", "reason": "번역투", "severity": "warn" },
+    { "pattern": "~로부터의", "reason": "번역투 (from)", "severity": "warn" },
+    { "pattern": "~에 의해", "reason": "번역투 (by) — 능동문 권장", "severity": "warn" },
+    { "pattern": "~에 의한", "reason": "번역투", "severity": "warn" },
+    { "pattern": "~을 가진다", "reason": "번역투 (have) — 한국어다운 동사로", "severity": "warn" },
+    { "pattern": "~을 가지고 있다", "reason": "번역투", "severity": "warn" },
+    { "pattern": "~을 행하다", "reason": "번역투 (do/perform)", "severity": "warn" },
+    { "pattern": "~에게 있어서", "reason": "번역투 (for)", "severity": "warn" },
+    { "pattern": "~에 있어", "reason": "번역투", "severity": "warn" },
+    { "pattern": "~함에 있어", "reason": "번역투", "severity": "warn" },
+    { "pattern": "~을 통해서", "reason": "번역투 (through) — '~로'가 자연스러움", "severity": "warn" },
+    { "pattern": "~에 다름 아니다", "reason": "번역투 (nothing other than)", "severity": "warn" },
+    { "pattern": "~에 다름없다", "reason": "번역투", "severity": "warn" },
+    { "pattern": "~에 지나지 않는다", "reason": "번역투 (no more than)", "severity": "warn" },
+    { "pattern": "~지 않으면 안 된다", "reason": "번역투 (must) — '~해야 한다' 권장", "severity": "warn" },
+    { "pattern": "~할 필요가 있다", "reason": "번역투 — '~해야 한다' 권장", "severity": "warn" },
+    { "pattern": "~할 수밖에 없었다", "reason": "남용 시 단조로움", "severity": "warn" },
+
+    { "pattern": "ㅎㅎ", "reason": "구어 / 채팅체", "severity": "error" },
+    { "pattern": "ㅋㅋ", "reason": "구어 / 채팅체", "severity": "error" },
+    { "pattern": "ㅠㅠ", "reason": "구어 / 채팅체", "severity": "error" },
+    { "pattern": "\\?\\?\\?", "reason": "물음표 3개 이상 — 문어체 부적합", "severity": "warn" },
+    { "pattern": "!!!", "reason": "느낌표 3개 이상", "severity": "warn" },
+    { "pattern": "\\.\\.\\.\\.\\.", "reason": "말줄임표 점 5개 이상", "severity": "warn" }
   ],
+
   "adverb_density": {
     "max_per_sentence": 1,
-    "targets": ["매우", "정말", "너무", "아주"]
+    "targets": ["매우", "정말", "너무", "아주", "굉장히", "엄청", "되게", "참", "꽤"]
   },
+
   "ai_openings": [
     "^그날 아침",
+    "^그날 밤",
     "^운명의",
-    "^.+는 생각했다"
+    "^.+는 생각했다",
+    "^.+는 깨달았다",
+    "^어쩌면",
+    "^마침내 그",
+    "^바로 그때",
+    "^그 순간",
+    "^.+에게 있어",
+    "^어느 날 갑자기",
+    "^모든 것이 시작된"
   ],
+
+  "ai_slop_patterns": [
+    { "pattern": "마치 .+처럼", "reason": "AI 가 한국어 직유에서 과사용하는 패턴", "severity": "warn" },
+    { "pattern": "그것은 .+ 그 이상이었다", "reason": "AI 슬롭 — '~ 이상이었다' 클리셰", "severity": "warn" },
+    { "pattern": "결코 잊을 수 없을", "reason": "감정 클리셰", "severity": "warn" },
+    { "pattern": "심장이 두근거렸다", "reason": "감정 클리셰", "severity": "warn" },
+    { "pattern": "숨이 멎는 듯했다", "reason": "감정 클리셰", "severity": "warn" },
+    { "pattern": "눈물이 흘러내렸다", "reason": "감정 클리셰 — 행동·감각으로 대체", "severity": "warn" },
+    { "pattern": "한숨을 내쉬었다", "reason": "감정 클리셰 — 너무 빈번", "severity": "warn" },
+    { "pattern": "고개를 끄덕였다", "reason": "남용 시 단조로움", "severity": "warn" },
+    { "pattern": "어깨를 으쓱했다", "reason": "번역투 동작", "severity": "warn" },
+    { "pattern": "미소를 지었다", "reason": "남용 — 미소의 종류로 구체화", "severity": "warn" }
+  ],
+
   "sentence_length": {
     "target_range": [15, 25],
-    "max_consecutive_long": 3
+    "max_consecutive_long": 3,
+    "max_consecutive_short": 5
   },
+
   "scene_overrides": {
-    "action":   { "target_range": [5, 15] },
-    "lyrical":  { "target_range": [20, 40] },
-    "dialogue": { "target_range": [3, 30] }
+    "action":    { "target_range": [5, 15] },
+    "lyrical":   { "target_range": [20, 40] },
+    "dialogue":  { "target_range": [3, 30] },
+    "interior":  { "target_range": [15, 35] }
   },
+
   "dialogue_tag_rules": {
     "max_consecutive_said": 1,
-    "said_variants": ["말했다", "물었다", "중얼거렸다", "내뱉었다", "속삭였다"]
+    "said_variants": ["말했다", "물었다", "중얼거렸다", "내뱉었다", "속삭였다", "되물었다", "답했다", "외쳤다"],
+    "discouraged_modifiers": [
+      "큰 소리로 말했다",
+      "낮은 목소리로 말했다",
+      "조용히 말했다"
+    ],
+    "_discouraged_reason": "지문에서 행동·맥락으로 보여주는 게 더 강함"
+  },
+
+  "tense_consistency": {
+    "preferred": "past",
+    "_doc": "주 서술 시제. lyrical scene 의 회상 블록은 대과거(~했었다)로 층위 분리"
+  },
+
+  "korean_grammar_hints": {
+    "_doc": "Proofreader 에이전트가 참고하는 한국어 어문규정 빈출 오류. severity 는 모두 warn (의도적 사용 가능).",
+    "checks": [
+      { "wrong": "되요", "right": "돼요", "rule": "한글맞춤법 — '되어요'의 준말은 '돼요'" },
+      { "wrong": "안되", "right": "안 돼", "rule": "한글맞춤법 — '되다'의 활용" },
+      { "wrong": "왠일", "right": "웬일", "rule": "혼동 — '왠'은 '왜인'의 준말, '웬'은 '어떠한'의 뜻" },
+      { "wrong": "어떻해", "right": "어떡해", "rule": "한글맞춤법" },
+      { "wrong": "낳다", "right": "(맥락에 따라) 낫다 / 낳다 / 낮다", "rule": "동음이의 — 낳다(出産) / 낫다(better, heal) / 낮다(low)" },
+      { "wrong": "맞히다", "right": "맞추다", "rule": "혼동 — 맞히다(과녁 명중) / 맞추다(짝/일치)" },
+      { "wrong": "갖다", "right": "(맥락) 가지다 / 갖다", "rule": "구어 vs 문어" },
+      { "wrong": "뵈요", "right": "봬요", "rule": "한글맞춤법 — '뵈어요'의 준말" }
+    ]
   }
 }

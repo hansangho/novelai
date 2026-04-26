@@ -1,0 +1,18 @@
+{
+  "$schema": "../../bible/style-rules.schema.json",
+  "version": "1.6-sf",
+  "_doc": "SF 프리셋. 하드 SF (과학적 엄밀) ~ 스페이스 오페라 양 극단 모두 커버. 기술 일관성 중요.",
+
+  "_extends": "../../bible/style-rules.json",
+
+  "ai_slop_patterns_genre": [
+    { "pattern": "전자음이 울려 퍼졌다", "reason": "SF 음향 클리셰", "severity": "warn" },
+    { "pattern": "차가운 금속의 감촉", "reason": "SF 감각 클리셰", "severity": "warn" },
+    { "pattern": "AI 가 감정을 갖는다", "reason": "SF 빈출 트로프 — 변주 권장", "severity": "warn" }
+  ],
+
+  "_critical": [
+    "기술 한계·작동 원리는 bible/universe/rules.md 에 명시 필수",
+    "한 번 정한 기술 룰은 후속 챕터에서 어김 금지 (Continuity Reviewer 검증)"
+  ]
+}
