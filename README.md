@@ -2,11 +2,17 @@
 
 한국어 장편 소설 집필을 위한 멀티 에이전트 시스템을 Claude Code 플러그인으로 배포하는 레포.
 
-- **19개 서브에이전트** + **14개 슬래시 커맨드** + **5단계 Gate 검증 파이프라인**
+- **21개 서브에이전트** + **16개 슬래시 커맨드** + **5단계 Gate 검증 파이프라인**
+- **소크라테스식 대화** — 캐릭터·플롯·장면 결정 시 산파술로 작가 답을 끌어냄 (v1.5+)
 - **Bible / State 이분법** — 불변 설정과 가변 상태를 엄격히 분리
 - **Timeline append-only** — 장편에서 사건 순서 혼선 방지
 - **Batch Feedback Gate** — 재작성 1~2회 안에 모든 일관성 이슈 수렴
-- **훅 기반 Bible 쓰기 차단** — 집필 중 설정 변경 실수 방지
+- **훅 기반 Bible 쓰기 차단** — 집필 중 설정 변경 실수 방지 (Bash 우회까지 차단, v1.6+)
+- **민감정보 자동 마스킹** — 세션 로그에서 API 키·토큰·비밀번호 11종 패턴 자동 가림 (v1.6+)
+- **한국어 룰셋 깊이** — 번역투 19종·AI 슬롭 클리셰 10종·어문규정 8종 자동 검출 (v1.6+)
+- **장르 프리셋** — `historic-noir` / `urban-fantasy` / `web-novel` / `sf` 각각 맞춤 시작점 (v1.6+)
+- **출판·공유 파이프라인** — `/export` 로 epub/pdf/docx 변환 (v1.6+)
+- **시각화** — `/visualize` 로 인물 관계 mermaid·SP 추적·timeline HTML (v1.6+)
 
 원본 PRD: [`docs/novel-writing-agent-prd-v1.4.docx`](docs/novel-writing-agent-prd-v1.4.docx) · 차용 참고: Thomas Houssin *Claude Book* (MIT).
 
@@ -76,11 +82,11 @@
 
 ---
 
-## 주요 슬래시 커맨드
+## 주요 슬래시 커맨드 (16종)
 
 | 커맨드 | 용도 |
 |--------|------|
-| `/init-novel` | 스캐폴딩 설치 |
+| `/init-novel [장르]` | 스캐폴딩 설치. 장르: `historic-noir` / `urban-fantasy` / `web-novel` / `sf` |
 | `/write-chapter N` | 초고 작성 + G1~G5 파이프라인 |
 | `/continue-writing` | 중단된 지점부터 재개 |
 | `/gate-status N` | 현재 Gate 진행 상태 |
@@ -91,9 +97,11 @@
 | `/timeline [필터]` | 사건 연대기 조회 |
 | `/bible-lock` / `/bible-unlock <사유>` | Bible 쓰기 토글 |
 | `/state [N]` | 챕터 말 상태 조회 |
-| `/perplexity <N\|파일>` | 독창성 분석 |
+| `/perplexity <N\|파일\|--calibrate>` | 독창성 분석 / 임계값 자동 튜닝 |
 | `/resume` | 세션 복원 |
-| `/metrics [--json\|--project N]` | 지표 리포트 |
+| `/metrics [--cost \| --project N \| --json]` | 지표 리포트 + 비용 추정 |
+| `/export [--format md\|epub\|pdf\|docx]` | 챕터 통합·내보내기 |
+| `/visualize` | 인물 관계 mermaid·SP 추적·timeline HTML 시각화 |
 
 ---
 
@@ -125,20 +133,24 @@ novelai/                                  (이 레포 = 플러그인 소스)
 │   └── novel-writer/                     # 실제 플러그인
 │       ├── .claude-plugin/plugin.json
 │       ├── agents/                       # 서브에이전트 21종
-│       ├── commands/                     # 슬래시 커맨드 14종
+│       ├── commands/                     # 슬래시 커맨드 16종
 │       ├── hooks/hooks.json              # PreToolUse·PostToolUse 훅
 │       ├── scripts/                      # python·bash 도우미
-│       │   ├── bible_guard.py            # LOCKED 쓰기 차단
+│       │   ├── bible_guard.py            # LOCKED 쓰기 차단 (Bash 우회 포함)
 │       │   ├── bible_lock.sh             # lock/unlock
 │       │   ├── gate_runner.py            # G1~G5 오케스트레이션
 │       │   ├── state_snapshot.py         # state/chapter-NN 생성
-│       │   ├── session_log.py            # PostToolUse 로그
-│       │   ├── validate_state.py         # YAML 문법 검증
-│       │   ├── pilot_metrics.py          # /metrics 백엔드
-│       │   └── init_novel.py             # /init-novel 백엔드
+│       │   ├── session_log.py            # PostToolUse 로그 (민감정보 마스킹)
+│       │   ├── validate_state.py         # YAML 문법 + 의미적 검증
+│       │   ├── pilot_metrics.py          # /metrics 백엔드 (+비용 추정)
+│       │   ├── perplexity_calibrate.py   # /perplexity --calibrate 백엔드
+│       │   ├── export_manuscript.py      # /export 백엔드
+│       │   ├── visualize.py              # /visualize 백엔드
+│       │   └── init_novel.py             # /init-novel 백엔드 (장르 옵션)
 │       └── templates/                    # /init-novel 이 복사할 빈 스캐폴딩
 │           ├── bible/, state/, timeline/, story/, research/
 │           ├── .work/, .session/
+│           ├── genres/                   # 장르별 프리셋 (historic-noir·urban-fantasy·web-novel·sf)
 │           ├── CLAUDE.md                 # 작가용 프로젝트 메모리
 │           └── gitignore.template
 ├── examples/

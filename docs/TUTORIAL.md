@@ -125,6 +125,18 @@ Claude 가 켜진 뒤:
 
 → 0절의 표에 있던 폴더들과 빈 템플릿 파일이 자동으로 들어옵니다. 이미 파일이 있으면 덮어쓰지 않습니다.
 
+### 장르 프리셋 (선택)
+장르가 이미 정해졌다면 미리 채워진 시작점을 받을 수 있습니다:
+
+```
+/init-novel historic-noir     # 1900~1950 시대극 + 누아르
+/init-novel urban-fantasy     # 현대 한국 + 초자연
+/init-novel web-novel         # 웹소설 (회귀·헌터·로판) — 짧은 호흡·후킹 강조
+/init-novel sf                # 하드 SF·스페이스 오페라
+```
+
+→ 일반 템플릿 위에 장르별 `style-rules.json`·`structure.md`·`characters/_template.md` 가 덮어 씌워집니다. 장르 클리셰 차단 규칙이 자동 추가돼요.
+
 ---
 
 ## 3. 기획 — 주제와 장르 탐색 (10~20분)
@@ -328,8 +340,14 @@ claude
 | 사건 검색 | `/timeline` / `/timeline 김도현` |
 | 미회수 떡밥 | `/timeline --unresolved` |
 | 독창성 단독 체크 | `/perplexity 5` |
+| 독창성 임계값 자동 튜닝 | `/perplexity --calibrate` (—write 로 적용) |
 | 전체 Gate 재주행 | `/revise-loop 5` |
 | 지표 대시보드 | `/metrics` / `/metrics --project 40` |
+| 비용 추정 | `/metrics --cost --model sonnet` |
+| **원고 통합·내보내기** | `/export` (md) / `/export --format epub` |
+| **편집자에 전달** | `/export --format docx --include-meta` |
+| **공모전 제출용 PDF** | `/export --format pdf --strip-comments` |
+| **시각화 산출물** | `/visualize` (mermaid 관계도·SP 추적·timeline HTML) |
 | Bible 수정 | `/bible-unlock <사유>` → 수정 → `/bible-lock` |
 | 사용 가능 명령 보기 | `/help` |
 
@@ -344,7 +362,43 @@ claude
 - **Revision Editor** — 구조·페이싱·감정 곡선·정보 분배
 - **Proofreader** — 한국어 어문규정·맞춤법·띄어쓰기
 
-각각 `.work/reviews/revision-*.md`, `proofread-chNN.md` 에 리포트.
+각각 `.work/reviews/chNN-iterX/revision.md`, `proofread.md` 에 리포트.
+
+---
+
+## 9.1 출판·공유 (퇴고 후)
+
+```
+/export
+```
+
+→ `build/manuscript-YYYY-MM-DD.md` 에 챕터 1~N 통합본 생성. 옵션:
+
+```
+/export --format epub                       # 전자책 (pandoc 필요)
+/export --format pdf --strip-comments       # PDF 출판용 (HTML 주석 제거)
+/export --format docx --include-meta        # 편집자 제출 (시놉시스·plan 포함)
+/export --range 1-5                         # 1~5장만
+```
+
+`pandoc` 설치: `brew install pandoc`. PDF 한국어는 추가로 `brew install --cask mactex` 필요.
+
+## 9.2 시각화
+
+```
+/visualize
+```
+
+→ `build/visualizations/` 에 다음 생성:
+- `relationships-chNN.md` — 챕터별 인물 관계 mermaid 그래프
+- `sp-tracking.md` — 서브플롯 진행 추적
+- `characters.md` — 인물별 등장·지식 누적 표
+- `timeline.html` — 사건 연대기 정적 HTML
+
+mermaid 파일은 GitHub 에서 자동 렌더링됩니다. HTML 은 브라우저로 열기:
+```bash
+open build/visualizations/timeline.html
+```
 
 ---
 
@@ -366,6 +420,13 @@ claude
 챕터에 시대 오류·공간 모순. `bible/universe/historical-facts.md` 와 충돌하는 부분 수정. 또는 `rules.md` 가 너무 엄격하면 완화.
 
 ### "Perplexity (G4) 플래그가 너무 많아요/적어요"
+**자동 캘리브레이션**:
+```
+/perplexity --calibrate
+```
+누적 리포트를 분석해 작가 작품에 맞는 권장 임계값을 제시. `--write` 추가하면 `bible/style-rules.json` 에 자동 반영 (Bible LOCKED 면 먼저 unlock).
+
+수동 조정:
 선택적 Gate 라 FAIL 은 안 납니다. 단, 수용률 20~50% 를 벗어나면 `perplexity-analyzer.md` 의 임계값 조정.
 
 ### "Claude 가 너무 많이 물어봐요"

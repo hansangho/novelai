@@ -36,11 +36,11 @@
 
 **Timeline append-only** — 확정 사건을 시간순 누적. 장편에서 "언제 누가 뭘 했더라" 검색 가능 (`/timeline kim-dohyun`, `/timeline --unresolved` 등).
 
-## 14 슬래시 커맨드
+## 16 슬래시 커맨드
 
 | 커맨드 | 용도 |
 |--------|------|
-| `/init-novel` | 빈 프로젝트 스캐폴딩 |
+| `/init-novel [장르]` | 빈 프로젝트 스캐폴딩. 장르: `historic-noir` / `urban-fantasy` / `web-novel` / `sf` |
 | `/write-chapter N` | 초고 작성 + G1~G5 파이프라인 자동 실행 |
 | `/continue-writing` | 중단된 지점부터 재개 |
 | `/gate-status N` | 현재 Gate 진행 상태 |
@@ -51,9 +51,11 @@
 | `/timeline [필터]` | 사건 연대기 조회 |
 | `/bible-lock` / `/bible-unlock <사유>` | Bible 쓰기 토글 |
 | `/state [N]` | 챕터 말 상태 조회 |
-| `/perplexity <N\|파일>` | 독창성 분석 |
+| `/perplexity <N\|파일\|--calibrate>` | 독창성 분석 / 임계값 자동 튜닝 |
 | `/resume` | 세션 복원 |
-| `/metrics [--json\|--project N]` | 지표 리포트 |
+| `/metrics [--cost \| --project N \| --json]` | 지표 리포트 + 비용 추정 |
+| `/export [--format md\|epub\|pdf\|docx]` | 챕터 통합·내보내기 |
+| `/visualize` | 인물 관계 mermaid·SP 추적·timeline HTML |
 
 ## 21 서브에이전트
 
