@@ -1,0 +1,44 @@
+name: 문서 일관성 검사
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'CLAUDE.md'
+      - 'docs/**'
+      - 'plugins/**'
+      - '.claude-plugin/**'
+      - 'tools/**'
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install YAML 의존성
+        run: pip install pyyaml
+
+      - name: 문서 일관성 검사 (8 항목)
+        run: python3 tools/check_docs.py
+
+      - name: 스크립트 컴파일 검증
+        run: |
+          python3 -m py_compile plugins/novel-writer/scripts/*.py
+          bash -n plugins/novel-writer/scripts/bible_lock.sh
+
+      - name: state YAML 의미 검증 (샘플 작품)
+        env:
+          PROJECT: ${{ github.workspace }}/examples/shanghai-shadow
+        run: |
+          CLAUDE_PROJECT_DIR="$PROJECT" \
+            python3 plugins/novel-writer/scripts/validate_state.py

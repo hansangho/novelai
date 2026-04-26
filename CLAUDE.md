@@ -6,6 +6,8 @@
 - 최상위에 `.claude-plugin/marketplace.json` 이 있어 Claude Code 가 이 레포를 마켓플레이스로 인식
 - 실제 플러그인 콘텐츠는 `plugins/novel-writer/` 하위
 - `examples/shanghai-shadow/` 는 플러그인으로 집필한 **샘플 작품** (ch1~8 확정)
+- `tools/` — 플러그인에 포함되지 **않는** 개발 도구 (check_docs.py 등)
+- `.github/workflows/` — push/PR 시 자동 실행되는 CI
 
 ## 개발 시 지켜야 할 것
 
@@ -49,13 +51,26 @@
 Batch Feedback 모드 — G1~G4 동시 수행 → G5 종합 → 재작성. 재작성 한도 3회.
 
 ## 배포 체크리스트
-1. `scripts/` 수정 시 → 작가 데이터 경로가 `$CLAUDE_PROJECT_DIR` 로만 접근하는지 확인
-2. `commands/*.md` 수정 시 → `${CLAUDE_PLUGIN_ROOT}` 로 스크립트 참조하는지 확인
-3. `templates/` 수정 시 → 작품 특정 내용 없는지 확인 (상하이 글자 검색)
-4. 파일럿: `examples/shanghai-shadow/` 에서 pilot_metrics 실행해 regression 없는지 확인
-5. `plugins/novel-writer/.claude-plugin/plugin.json` 의 `version` bump
-6. `.claude-plugin/marketplace.json` 의 `plugins[0].version` 도 함께 bump
-7. git tag → push → 사용자에게 "plugin update" 안내
+**모든 단계가 자동화됨 — 한 줄로 검증:**
+```
+python3 tools/check_docs.py
+```
+8 항목(커맨드 동기화·에이전트 언급·버전 일치·스크립트 트리·하드코딩 경로·JSON 유효성·죽은 링크·카운트 표기) 자동 검사. ERROR 하나라도 있으면 commit·push 보류.
+
+GitHub Actions (`.github/workflows/check-docs.yml`) 가 push/PR 시 자동 실행 — 실패하면 머지 차단.
+
+### 수동 점검 항목 (자동화 어려운 부분)
+1. **새 커맨드/에이전트 추가 시** → check_docs.py 가 4 개 핵심 문서(README × 2 + TUTORIAL + templates/CLAUDE) 동기화 자동 검증. 누락이 ERROR 로 나옴.
+2. **스크립트 수정 시** → 작가 데이터 경로가 `$CLAUDE_PROJECT_DIR` 로만 접근하는지 grep 으로 확인 (`grep -r "Path(__file__)" plugins/novel-writer/scripts/`).
+3. **커맨드 마크다운 수정 시** → `${CLAUDE_PLUGIN_ROOT}` 로 스크립트 참조하는지 (상대 경로 `python3 scripts/...` 금지).
+4. **샘플 작품 회귀 테스트**:
+   ```
+   CLAUDE_PROJECT_DIR=$PWD/examples/shanghai-shadow \
+   CLAUDE_PLUGIN_ROOT=$PWD/plugins/novel-writer \
+     python3 plugins/novel-writer/scripts/pilot_metrics.py
+   ```
+5. **버전 bump** — plugin.json + marketplace.json 양쪽. 카운트 검사가 잡지 않으니 수동.
+6. git tag (선택) → push → 사용자에게 `/plugin marketplace update hans-novel-tools` 안내.
 
 ## 파일럿 히스토리
 - `docs/pilot-01-retrospective.md` — 초기 2챕터 파일럿. YAML/경로 이슈 발견

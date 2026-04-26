@@ -36,7 +36,7 @@
 
 **Timeline append-only** — 확정 사건을 시간순 누적. 장편에서 "언제 누가 뭘 했더라" 검색 가능 (`/timeline kim-dohyun`, `/timeline --unresolved` 등).
 
-## 16 슬래시 커맨드
+## 17 슬래시 커맨드
 
 | 커맨드 | 용도 |
 |--------|------|

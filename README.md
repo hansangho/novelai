@@ -2,7 +2,7 @@
 
 한국어 장편 소설 집필을 위한 멀티 에이전트 시스템을 Claude Code 플러그인으로 배포하는 레포.
 
-- **21개 서브에이전트** + **16개 슬래시 커맨드** + **5단계 Gate 검증 파이프라인**
+- **21개 서브에이전트** + **17개 슬래시 커맨드** + **5단계 Gate 검증 파이프라인**
 - **소크라테스식 대화** — 캐릭터·플롯·장면 결정 시 산파술로 작가 답을 끌어냄 (v1.5+)
 - **Bible / State 이분법** — 불변 설정과 가변 상태를 엄격히 분리
 - **Timeline append-only** — 장편에서 사건 순서 혼선 방지
@@ -133,7 +133,7 @@ novelai/                                  (이 레포 = 플러그인 소스)
 │   └── novel-writer/                     # 실제 플러그인
 │       ├── .claude-plugin/plugin.json
 │       ├── agents/                       # 서브에이전트 21종
-│       ├── commands/                     # 슬래시 커맨드 16종
+│       ├── commands/                     # 슬래시 커맨드 17종
 │       ├── hooks/hooks.json              # PreToolUse·PostToolUse 훅
 │       ├── scripts/                      # python·bash 도우미
 │       │   ├── bible_guard.py            # LOCKED 쓰기 차단 (Bash 우회 포함)
