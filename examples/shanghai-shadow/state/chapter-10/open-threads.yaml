@@ -1,0 +1,77 @@
+# state/chapter-10/open-threads.yaml
+# 챕터 10 종료 시점 서브플롯 상태.
+
+chapter: 10
+completed_at: 2026-05-01T20:30:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 10
+    status: partial
+    planned_payoff_chapter: 12
+    notes: |
+      ch10 에서 외부 분석 입력 — 이세아 측 분석 '양쪽 다 속이고 있을 가능성' (L.73). 단 '정확히는 모른다' 표명. 박 부장 의도는 ch10 시점에서도 정확하게는 미공개 유지.
+      도현 결심 가속 — 시한 압력 경고 ('박 부장 곁에 너무 오래 계시지는 마세요', L.79) 가 외부 입력으로 SP-D 가속에 작용.
+      payoff_chapter ch12 유지 (완전 회수).
+
+  - id: SP-B
+    label: 이세아의 정체
+    opened_at_chapter: 0
+    last_hinted_at_chapter: 10
+    status: closed
+    planned_payoff_chapter: 10
+    closed_at_chapter: 10
+    notes: |
+      ch10 closed — 1923-03-12 15:00~15:25 고려다방 두 번째 자리에서 위장 해제. 결정대사 5종 (L.37 / L.41 / L.45 / L.49 / L.53):
+      - 이름 두 개, '이세아' 1920-05 만들어짐 (L.37)
+      - 왼쪽 눈썹 흉터 = 1919 만세 운동 직후 종로 (L.41) — ch2 첫 관찰의 설명이 이 자리에 와 도착
+      - 1922-08 박 부장 상하이 방문 시 박명숙 가명으로 동석 (L.45) — ch7 영사관 명부 27번째 줄 가명의 정체 회수
+      - 영사관 명부의 가명 = 자기 동지, 사망 (L.49)
+      - 포섭 의도 없음, 알아둘 권리 부여 (L.53)
+      도현 측 답 lock — L.61 '...그렇군.' / L.69 박 부장 진짜 의도 질문.
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 9
+    status: partial
+    planned_payoff_chapter: 12
+    notes: |
+      ch9 1차 부분 회수 후 ch10 비등장. 잔존 부분 (정치적 차원: 박 부장 이름·이세아·1921 사건 정체·뇌물) 변동 없음. 완전 회수 ch12 유지.
+
+  - id: SP-D
+    label: 도현 결심의 방향
+    opened_at_chapter: 9
+    last_hinted_at_chapter: 10
+    status: open
+    planned_payoff_chapter: 12
+    notes: |
+      ch9 가중치 1단 → ch10 2단 이동 (사용자 명시). 가속 요인:
+      - ch10 L.17 '내일 갈 것인지 안 갈 것인지를 자신에게 묻지 않았다' = 결심 한 칸 이동 후 첫 행동 형태 (질문 회피 = 결정의 한 형태)
+      - ch10 L.79 이세아 시한 압력 경고 (외부 입력) — 박 부장 곁에 너무 오래 계시지 마세요
+      - ch10 L.89 '박 부장 처리의 두 길이 처음으로 다른 무게로 느껴짐' (어느 쪽인지 이름 붙이지 않음)
+      - ch10 L.97~101 자기 발소리 자각 — 발소리 모티프가 도현 본인 쪽으로 이동
+      payoff_chapter 10 → 12 재조정 (SP-A 와 동기화 — 박 부장 처리는 박 부장 의도 완전 회수와 같은 회수 호에서 풀려야 정합). WARN 허용.
+
+  - id: SP-E
+    label: 이웃 마당 양철 물소리
+    opened_at_chapter: 9
+    last_hinted_at_chapter: 10
+    status: closed
+    planned_payoff_chapter: 10
+    closed_at_chapter: 10
+    notes: |
+      ch10 closed — 1923-03-11 일요일 야간 도현 마루방 L.7 한 줄 봉합: '자기 집 마당에서 나는 소리가 아니었다. 옆집 처마의 홈통이었다. 그저께 밤에 마루방까지 들어왔던 그 양철 소리도 같은 자리에서 났을 것이었다.' G3 권고 #1 (ch9 잔존) 해소.
+
+  - id: SP-F
+    label: 이세아의 시한 압력 경고
+    opened_at_chapter: 10
+    last_hinted_at_chapter: 10
+    status: open
+    planned_payoff_chapter: 12
+    notes: |
+      ch10 신규 SP. L.79 이세아 떠나며 — '당신이 어느 방향으로도 움직이지 않으셔도 됩니다. 다만 — 박 부장 곁에 너무 오래 계시지는 마세요.'
+      외부 입력으로서 도현의 SP-D 가속에 직접 작용. '시한' 자체는 명시되지 않음 — 이세아 측 분석 기반 추정.
+      payoff 권고 ch12 (SP-A·SP-D 와 같은 회수 호에서 의미 회수 — 박 부장 처리 시점이 시한 압력에 부응하는지 여부가 회수 형태).

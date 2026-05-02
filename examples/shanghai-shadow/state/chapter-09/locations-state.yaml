@@ -1,0 +1,43 @@
+chapter: 9
+completed_at: 2026-05-01T20:00:00+09:00
+
+locations:
+  shanghai-office:
+    status: closed
+    notable_changes:
+      - "ch8 종료 시점에 도현·이세아 철수 (승계)"
+
+  shanghai-concession:
+    status: operational
+    notes:
+      - "ch9 비등장 (배경 유지)"
+
+  kanbu-ferry:
+    status: operational
+    notes:
+      - "ch8 → ch9 사이 부산 입항 후 운영 유지 (도현 03-02 밤 갑판 → 03-03 부산 도착 → 야간 경성 이동)"
+
+  jongno-station:
+    status: operational
+    notes:
+      - "박 부장 배후 유지 (ch9 비등장)"
+
+  kim-dohyun-home:
+    status: operational
+    notable_changes:
+      - "ch9 주요 무대로 활성화 — 식탁(작은 상) + 도현 방 + 마당(이웃 또는 거주자 양철 물소리) + 부엌"
+      - "도현 방 = 마루방 (서재 겸용) 첫 명시 — L.65 '의자 다리가 마룻바닥을 짧게 끌었다' 가 baseline"
+      - "도현 방 가구: 책상 / 잉크병 / 종이 더미 / 서랍 (명령서 사본 보관) / 의자 — ch3 가구 묘사와 모순 없음"
+      - "마당에 양철 대야/물통 보유 (1923 시대 정합) — 누가 받은 물인지 미상 (이웃 또는 거주자) — ch10 한 줄 봉합 권장 (G3 권고 #1 잔존)"
+    interior:
+      dohyun-room:
+        type: 마루방 (서재 겸용)
+        floor: 마룻바닥
+        baseline_sounds:
+          - "의자 다리가 마룻바닥을 짧게 끄는 소리 — ch10+ 동일 공간 재방문 시 변주 가능 (같은 소리 / 다른 소리)"
+        baseline_visuals:
+          - "책상 위 잉크병 + 종이 더미 (수민이 정리한 흔적: 모서리 가지런, 잉크병 옆 먼지 닦임)"
+          - "서랍 — 명령서 사본 보관처 (도현이 ch9 에 손잡이만 짚고 끝내 열지 않음)"
+          - "창밖 마당의 감나무 가지 (3월 오전 햇빛 짧게 들어왔다 사라짐)"
+    notes:
+      - "ch10 동일 공간 재사용 시 마루방 전제로 작성. 서재 겸용 = 책상·서랍·의자가 같은 방에 있음."

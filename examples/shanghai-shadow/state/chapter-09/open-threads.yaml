@@ -1,0 +1,52 @@
+chapter: 9
+completed_at: 2026-05-01T20:00:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 9
+    status: partial
+    planned_payoff_chapter: 12
+    notes: "ch9 에서 도현의 결심이 '한 칸 앞으로' 이동 — 박 부장 처리 방향으로 가속. 단 본인도 어느 쪽으로 밀렸는지 미상. ch10 첫 행동에서 신체 동작으로 표면화 예정."
+
+  - id: SP-B
+    label: 이세아의 정체
+    opened_at_chapter: 0
+    last_hinted_at_chapter: 8
+    status: open
+    planned_payoff_chapter: 10
+    notes: "ch9 비등장 — ch8 탐색 질문 이후 변화 없음. ch10 reveal 향한 마지막 단서 유지."
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 9
+    status: partial
+    planned_payoff_chapter: 12
+    notes: |
+      ch9 에서 1차 부분 회수.
+      - 회수된 부분: 수민이 ch6~8 누적 관찰을 직접 발화로 표면화 (L.15 '명령서 사본이 책상 서랍에 있던 게 떨어져 있었어요'). 도현이 부정도 인정도 하지 않음 → 수민은 1921년 사건 존재까지 도현의 시인을 받아냄 (L.31, L.37).
+      - 잔존 부분 (정치적 차원): 박 부장 이름·이세아·1921 사건 정체·뇌물의 구체. 수민 v2 (직면자) 의 다음 행동에서 추가 회수 예정.
+      - planned_payoff_chapter 8→9 1차 부분 회수 완료, 완전 회수 ch12 로 재조정 (SP-A 와 동기화).
+
+  - id: SP-D
+    label: 도현 결심의 방향
+    opened_at_chapter: 9
+    last_hinted_at_chapter: 9
+    status: open
+    planned_payoff_chapter: 10
+    notes: |
+      ch9 신규 SP. 도현의 미결정이 어제와 같지 않다는 자각 (L.67) 이 열림.
+      방향: 박 부장 처리 두 길 중 한쪽 — 어느 쪽으로 밀렸는지는 본인도 미상.
+      ch10 첫 행동(출근/외출/연락)에서 신체 동작으로 첫 표면화 예정.
+
+  - id: SP-E
+    label: 이웃 마당 양철 물소리
+    opened_at_chapter: 9
+    last_hinted_at_chapter: 9
+    status: open
+    planned_payoff_chapter: 10
+    notes: |
+      ch9 L.69 마당 어딘가에서 누군가 물 받는 소리 (양철에 부딪히는 소리) — 누구인지 미상.
+      G3 권고 #1 잔존 — ch10 에서 한 줄 봉합 권장 (이웃집 / 수민 본인 / 다른 거주자 중 하나).

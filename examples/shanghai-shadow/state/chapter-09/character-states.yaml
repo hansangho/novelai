@@ -1,0 +1,107 @@
+chapter: 9
+completed_at: 2026-05-01T20:00:00+09:00
+# 서사 내: 1923-03-04 일요일 오전, 경성 도현 자택 (식탁 → 도현 방 = 마루방)
+
+characters:
+  kim-dohyun:
+    version: v2
+    physical:
+      location: 경성 자택 도현 방 (마루방, 서재 겸용)
+      fatigue_level: mid
+      injuries:
+        - "왼손 검지 흉터 시큰임 (ch7 표지 callback, 식탁 직면 직후 1회 — 손등 핏줄 → 두 번째 마디 → 흉터 순서로 분해 등록)"
+      body_signals:
+        - "발바닥 무게중심 좌측 편향 (왼발 — 흉터와 같은 좌측 신호 신규)"
+        - "수저를 두 번 들었다 내려놓음 — 결정 미달 신체화"
+    emotional:
+      dominant: "미결정 — 질적 이동 후 (어제까지의 미결정과 오늘 아침의 미결정이 같지 않음)"
+      sub:
+        - "딸에게 한 번 신뢰를 잃었다는 자각 — fatal flaw 격언 자기-적용 hinge"
+        - "처음으로 딸을 한 사람으로 마주봐야 한다는 인식"
+      toward:
+        sumin:
+          shift: "보호 대상 → 한 사람으로 마주 보아야 할 상대 (질적 전환)"
+          trust_change: "유지 (9), 단 자기 책임 자각으로 intimacy 6→8"
+        park-bujang:
+          shift: "처리 결심 방향으로 가속 (어느 쪽으로 밀렸는지 본인도 미상이나 미결정이 한 칸 앞으로 이동)"
+        lee-seah:
+          shift: "변화 없음 (ch9 비등장)"
+    knowledge:
+      aware_of:
+        - "(ch1-8 누적 항목 유지)"
+        - "딸이 명령서 사본의 의미를 묻었음 — 수민이 책상 서랍 명령서 사본 떨어진 것을 직접 목격하고 식탁에서 발화"
+        - "딸이 1921년 가을 사건의 존재를 인지하고 있음 (구체 내용은 묻지 않음)"
+        - "자기 안에서 1921 봉투가 표면 감각으로 풀려나오기 시작 (두께·놓아둔 자리의 나무결까지 — 안 내용은 여전히 본인만 앎)"
+      unaware_of:
+        - "박 부장의 정확한 의도 (유지)"
+        - "이세아의 정체 (유지)"
+        - "수민이 명령서 사본 외에 무엇을 더 알고 있는지 (수민 v2 진입 후 첫 행동을 아직 못 봄)"
+        - "자기 결심이 박 부장 처리 두 길 중 어느 쪽으로 밀렸는지 (본인도 모름)"
+    last_dialogue_ref: story/chapters/chapter-09.md#scene-1
+    notes:
+      - "결정적 라인 5개 lock — L.11 / L.19 / L.31 / L.45 / L.67 (원문 글자 단위 보존, ch10+ 재작성·revision 시 절대 변경 금지)"
+      - "ch10 첫 행동(출근/외출/연락)에서 '결심의 방향'이 신체 동작으로 표면화 예정"
+      - "1921 봉투 안 내용은 ch10 에서도 본인만 앎 — 표면 감각 해상도만 변주 가능"
+
+  kim-sumin:
+    version: v2
+    physical:
+      location: 경성 자택 (식탁 → 부엌)
+      fatigue_level: mid
+      body_signals:
+        - "식탁 모서리를 짚었다 떼는 손 — 손가락 마디는 어른처럼 굽고, 손목은 아이처럼 가볍게 들림 (12세 경계의 비대칭, v2 진입 신체 표지)"
+        - "양말 한쪽이 살짝 접힘 (도현 시점 관찰 — 아이 흔적 잔존)"
+        - "한 술 정도만 들고 거의 안 먹음"
+        - "발소리가 작음 (부엌으로 사라질 때)"
+    emotional:
+      dominant: "직면 — 떨리지 않으려고 한 흔적이 있는 직면"
+      sub:
+        - "사랑 변하지 않음 / 자기는 변할 것이라는 자각 (분리 선언)"
+      toward:
+        kim-dohyun:
+          shift: "관찰자 v1 → 직면자 v2 진입 — 사랑은 유지, 신뢰는 부분 회복 (직접 발화로 표면화)"
+          trust_change: "ch3 종료 7 → ch9 종료 9 (직접 직면 후 부분 회복)"
+          intimacy_change: "유지 (6)"
+    knowledge:
+      aware_of:
+        - "아버지 책상 서랍에 '명령서 사본' 이라고 부를 수 있는 종이가 있었다 (1회 직접 목격)"
+        - "1921년 가을에 아버지가 무언가를 '묻어둔 채로' 살아왔다는 사실 (도현 본인의 시인)"
+        - "그 묻어둔 것이 점점 커지고 있다는 사실 (도현 본인의 시인)"
+        - "아버지가 그것의 처리를 미루지 않을 단계에 들어섰음을 신체적으로 감지"
+      unaware_of:
+        - "1921년 가을 사건의 구체 내용 (봉투 / 뇌물 / 박 부장 이름)"
+        - "박 부장의 존재·이름·관계"
+        - "이세아의 존재"
+        - "상하이 파견의 실제 목적"
+    last_dialogue_ref: story/chapters/chapter-09.md#scene-1
+    notes:
+      - "v2 진입 선언 라인 = L.45 '사랑이 변하지 않는다고 해서 저까지 변하지 않을 수는 없어요' — 약속 아님, 통보."
+      - "ch10 에서 v2 의 첫 구체 행동 필요 — (a) 도현 부재 시 책상 한 번 더 / (b) 다른 어른에게 직접 접근 / (c) 학교 기록 검색 중 하나."
+
+  park-bujang:
+    version: v2
+    physical:
+      location: 경성 (배경)
+    emotional:
+      dominant: "(ch9 비등장 — 도현 결심 가속의 대상으로만 존재)"
+    knowledge:
+      aware_of:
+        - "도현 귀환 (ch8→ch9 사이 자택 도착)"
+      unaware_of:
+        - "도현이 영사관 기록 확인, 서류 일부 소각 (ch8 승계)"
+        - "도현의 결심이 한 칸 이동했음 (본인 미상)"
+    last_dialogue_ref: story/chapters/chapter-04.md#scene-1
+
+  lee-seah:
+    version: v1
+    physical:
+      location: 경성 (배경, ch9 비등장)
+      fatigue_level: unclear
+    emotional:
+      dominant: "(ch9 비등장)"
+    knowledge:
+      aware_of: []
+      unaware_of: []
+    last_dialogue_ref: story/chapters/chapter-08.md#scene-2
+    notes:
+      - "SP-B 의 ch10 reveal 향한 마지막 단서 ch8 에서 끝남 — ch9 ch10 사이 기간 동안 탐색 패턴 유지 가정."

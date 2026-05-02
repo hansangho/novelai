@@ -1,0 +1,42 @@
+chapter: 9
+completed_at: 2026-05-01T20:00:00+09:00
+
+relationships:
+  - from: kim-dohyun
+    to:   park-bujang
+    trust: 0
+    intimacy: 0
+    label: "적대 (처리 결심 방향으로 가속, 어느 쪽으로 밀렸는지 미상)"
+    last_significant_event: "ch9 — 도현 미결정의 질적 이동 (어제까지의 미결정과 오늘의 미결정이 다름)"
+
+  - from: kim-dohyun
+    to:   lee-seah
+    trust: 3
+    intimacy: 2
+    label: "경계 상승 유지 (ch9 비등장)"
+    last_significant_event: "ch8 갑판 탐색 질문 후 거리 유지"
+
+  - from: lee-seah
+    to:   kim-dohyun
+    trust: 6
+    intimacy: 3
+    label: "위장 유지 (ch9 비등장)"
+    last_significant_event: "ch8 갑판 — 묻지 말 걸 그랬어요 (물러섬 패턴)"
+
+  - from: kim-dohyun
+    to:   sumin
+    trust: 9
+    intimacy: 8
+    label: "보호 대상 → 한 사람으로 마주 보아야 할 상대 (자기 책임 자각으로 intimacy 6→8)"
+    last_significant_event: |
+      ch9 — 식탁 직면. fatal flaw 격언 ('한 번 잃은 신뢰는 돌아오지 않는다') 의 자기-적용. '둘 다네. 그리고 둘 다 아니네' 시인. 딸을 한 사람으로 마주봐야 한다는 자각.
+
+  - from: sumin
+    to:   kim-dohyun
+    trust: 9
+    intimacy: 6
+    label: "직면 후 부분 회복 — 사랑은 변하지 않음 / 자기는 변할 것이라는 분리 선언"
+    last_significant_event: |
+      ch9 — 식탁 직면. L.45 '아버지. 저는 아버지를 사랑해요. 그게 변할 일은 없어요. 그런데 — 사랑이 변하지 않는다고 해서 저까지 변하지 않을 수는 없어요'. 아버지의 시인을 받아낸 직후 trust ch3-종료 7 → ch9-종료 9 부분 회복.
+    note: |
+      부녀 신뢰 비대칭 역전: ch8 종료 시점 '도현 9 vs 수민 7' (수민이 낮음) → ch9 종료 시점 '도현 9 vs 수민 9'. 친밀도는 '도현 8 vs 수민 6' (도현이 자기 책임 자각으로 일시적으로 더 가까이 다가가려 함, 수민은 분리 선언 직후라 유지).

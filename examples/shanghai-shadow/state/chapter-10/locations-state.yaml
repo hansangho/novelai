@@ -1,0 +1,69 @@
+# state/chapter-10/locations-state.yaml
+# 챕터 10 종료 시점 장소 상태 스냅샷.
+
+chapter: 10
+completed_at: 2026-05-01T20:30:00+09:00
+
+locations:
+  shanghai-office:
+    status: closed
+    notable_changes:
+      - "ch8 종료 시점에 도현·이세아 철수 (승계 유지)"
+
+  shanghai-concession:
+    status: operational
+    notes:
+      - "ch10 비등장 (배경 유지)"
+
+  kanbu-ferry:
+    status: operational
+    notes:
+      - "ch10 비등장 (운영 유지)"
+
+  jongno-station:
+    status: operational
+    notable_changes:
+      - "도현 경무국 복귀 1주차 (1923-03-04 ~ 03-11) — 책상 / 통상 업무 / 박 부장 배후 유지. ch10 다방 외출 출발지로 사용 (도보 10분 거리)."
+    notes:
+      - "박 부장 배후 유지 (ch10 비등장 인물)"
+      - "도현 책상 — ch10 시점에 이세아의 쪽지가 서류 더미 위에 얹힘 (1923-03-11 야간 도현 자택에서 쪽지 발견 직전 어딘가에서 책상 → 자택 이동 경로 가능, 본문은 자택 마루방에서 발견 명시)"
+
+  kim-dohyun-home:
+    status: operational
+    notable_changes:
+      - "ch9 활성화 후 유지. ch10 (1923-03-11 일요일 야간) 마루방에서 도현이 쪽지 1매 발견 (서류 더미 위)"
+      - "마당: 양철 물소리의 정체가 ch10 에서 봉합 — '옆집 처마의 홈통' (이웃집 빗물 받이). ch9 SP-E 한 줄 봉합 완료."
+    interior:
+      dohyun-room:
+        type: 마루방 (서재 겸용)
+        floor: 마룻바닥
+        baseline_sounds:
+          - "의자 다리가 마룻바닥을 짧게 끄는 소리 (ch9 baseline 유지)"
+          - "옆집 처마 홈통의 양철 빗물 소리 — ch9 미상이었던 마당 양철 소리의 정체 (ch10 L.7 봉합)"
+          - "등불 갓 안 심지 흔들림 (ch10 신규)"
+        baseline_visuals:
+          - "책상 위 잉크병 + 종이 더미 (ch9 수민 정리 흔적 승계)"
+          - "서랍 — 명령서 사본 보관처 (ch9 승계). ch10 에서 이세아 쪽지를 한 번 접어 넣음 (저녁 일요일 야간)"
+          - "창밖 마당 (ch10 야간 — 거리 어두움)"
+    notes:
+      - "ch10 마루방 사용은 ch9 명시와 정합. 같은 책상·같은 서랍·같은 의자 자리."
+      - "옆집 처마 홈통 = SP-E 봉합 한 줄 (ch9 G3 권고 #1 잔존 해소)"
+
+  goryeo-dabang:
+    status: operational
+    notable_changes:
+      - "ch10 신규 등록 — 1923 경성 다방. 종로 경찰서에서 도보 약 10분 거리 (도현 14:55 도착 동선)."
+    interior:
+      type: 다방 (낮빛이 좁은 창으로 옅게 들어옴)
+      tables: "원목 탁자 2개. 의자는 삐걱거리지 않는 종류."
+      seating:
+        - "두 번째 자리 — 이세아 ch10 약속 자리 (입구 기준 두 번째 탁자, 이세아가 도현 도착 전 이미 착석)"
+      surface_details:
+        - "두 번째 자리 탁자: 손가락 두 마디 너비 나뭇결 균열. 균열 끝이 다른 결로 갈라짐 (도현 시선 머무는 자리)"
+      ambient:
+        - "낮빛 옅음 (창 좁음)"
+        - "다른 손님이 의자를 끄는 짧은 소리 1회 (긴 침묵 중 외부 음 1회)"
+    notes:
+      - "1923 경성 다방 시대 정합 — 다방 보급기 (1920년대 중반 본격화 직전 단계). 종로 인근 위치 자연스러움."
+      - "두 번째 자리 = 결정대사 7종 발화 자리. 위치 lock — ch11+ 회상 시 동일 자리 명시."
+      - "다방 입구 / 두 번째 탁자 / 좁은 창 / 나뭇결 균열 — 4개 시각 표지 ch10 본문 명시."

@@ -4,6 +4,9 @@
 /examples/*/.session/current.yaml
 /examples/*/.session/logs/
 
+# 레포 루트의 휘발성 세션 (Claude Code 가 자동 생성)
+/.session/
+
 # Claude Code 개인 설정
 .claude/settings.local.json
 

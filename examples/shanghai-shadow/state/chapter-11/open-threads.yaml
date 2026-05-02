@@ -1,0 +1,80 @@
+# state/chapter-11/open-threads.yaml
+# 챕터 11 종료 시점 서브플롯 상태.
+
+chapter: 11
+completed_at: 2026-05-01T21:00:00+09:00
+
+threads:
+  - id: SP-A
+    label: 박 부장의 실제 공작
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 11
+    status: partial
+    planned_payoff_chapter: 12
+    notes: |
+      ch11 진행 — 박 부장이 1921 가을 사건을 직접 카드로 사용하여 도현에게 압박 표면화. 'L.17 1921년 가을의 일은, 묻어둔 게 가장 작아서 좋았던 것이지' (1923-03-19 월 집무실).
+      이세아 측 외부 분석 (ch10 '양쪽 다 속이고 있을 가능성') 에 그치던 박 부장 의도가 본인 측 카드 사용으로 처음 표면화. 단 박 부장 정확한 의도는 ch11 시점에서도 미공개 유지 — 압박 / 시험 / 시한 통보 / 다음 수의 사전 알림 중 어느 쪽인지 ch12 다음 액션에서 외화 가능.
+      박 부장 카드 잔여: 명숙·1922-08·이세아 정체 중 1장 이상 (G5 ch12 진입 훅 #3).
+      payoff_chapter ch12 유지 (완전 회수).
+
+  - id: SP-B
+    label: 이세아의 정체
+    opened_at_chapter: 0
+    last_hinted_at_chapter: 10
+    status: closed
+    planned_payoff_chapter: 10
+    closed_at_chapter: 10
+    notes: |
+      ch10 closed 유지 (변동 없음). ch11 비변동.
+
+  - id: SP-C
+    label: 수민의 의심
+    opened_at_chapter: 1
+    last_hinted_at_chapter: 11
+    status: partial
+    planned_payoff_chapter: 12
+    notes: |
+      ch11 부분 진행 — 수민의 동행 선언 ('L.77 저는 변하고 있어요. 아버지도 그러시죠') 으로 ch9 분리 선언이 한 칸 이동. 단 정치적 차원 (박 부장 이름·이세아·1921 사건 정체·뇌물) 미접근 보존.
+      ch12+ 첫 시험 = 수민이 도현의 변화를 외부에서 어떻게 확인하는지, 또는 도현이 그 변화를 수민에게 어떻게 노출하는지 (G5 ch12 진입 훅 #5).
+      완전 회수 ch12 유지 (SP-A 와 동기화).
+
+  - id: SP-D
+    label: 도현 결심의 방향
+    opened_at_chapter: 9
+    last_hinted_at_chapter: 11
+    status: open
+    planned_payoff_chapter: 12
+    notes: |
+      ch11 진행 — 결심 한 칸 → 결심 완료 단계. 행동 미실행 (이름 미부여, 종로 방향 외화만).
+      ch11 가속 요인:
+      - 박 부장 1921 카드 직접 사용 (L.17) — 압박 표면화
+      - 이세아 부재 첫 인지 — 시한 압력 경고 (SP-F) 의 부재 형태로의 변환
+      - 세 길 정렬 (1923-03-19 월 야간 마루방): 첫째 위쪽 보고 / 둘째 박 부장과 마주 앉기 / 셋째 자기가 기명 행위자가 되지 않는 길. 첫째·둘째는 자기 결함과 같은 모양으로 다시 자리에 앉는 길. 셋째 길 무게 처음으로 다른 결로 느껴짐. 이름은 어느 쪽에도 안 붙음.
+      - 봉투 외부 표면 첫 가시화 (1923-03-19 야간 회상 + 1923-03-20 식후 직시) — 두 해째 닫혀 있던 서랍 첫 열림. 봉투 미반출.
+      - 발소리 모티프 진전: ch10 한 박자 늦게 → ch11 걸음과 자각 동시.
+      - 수민 동행 선언 수용 — 답하지 않는 자리에 한 줄이 그대로 앉음 = 응답의 한 형태.
+      신체 표지: ch11 Scene 1 시큰임 1회 = 마지막 시큰임. Scene 5 의도적 누락 (closure 직전 단계, 무게가 손등 한 자리 → 몸 전체 방향).
+      ch12 진입 훅 #1 — 종로 방향의 의미 미부여. 첫 장면이 이 방향의 의미를 외부 사건으로 결정.
+      payoff_chapter ch12 유지 (행동 외화 단위 = 봉투의 다음 자리 — 서랍 안 / 도현 손 / 다른 자리 미상).
+
+  - id: SP-E
+    label: 이웃 마당 양철 물소리
+    opened_at_chapter: 9
+    last_hinted_at_chapter: 10
+    status: closed
+    planned_payoff_chapter: 10
+    closed_at_chapter: 10
+    notes: |
+      ch10 closed 유지 (변동 없음). ch11 비변동.
+
+  - id: SP-F
+    label: 이세아의 시한 압력 경고
+    opened_at_chapter: 10
+    last_hinted_at_chapter: 11
+    status: open
+    planned_payoff_chapter: 12
+    notes: |
+      ch11 부재 형태로의 변환 — 1923-03-19(월) 14시경 사무실 자리 부재 첫 인지. 도현 측 묻지 않음 = 거리 유지 합의 (ch10 'L.79 어느 방향으로도 움직이지 않으셔도 됩니다') 의 도현 측 수용.
+      'L.79 박 부장 곁에 너무 오래 계시지는 마세요' 라인이 자리에 사람이 없을 때 한 결 더 무겁게 다시 발화되고 있음 (도현 내면). 자리에 사람이 있을 때의 발화보다 부재 발화가 한 결 더 무거움.
+      ch12 진입 훅 #2 — 이세아의 행보 (생사·위치·접촉) 가 첫 외부 사실로 등장 시점.
+      payoff 권고 ch12 (SP-A·SP-D 와 같은 회수 호 유지).
