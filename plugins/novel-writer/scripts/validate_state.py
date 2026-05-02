@@ -47,6 +47,10 @@ REQUIRED_TOP_KEYS = {
 
 ASYMMETRY_THRESHOLD = 4  # trust 양방향 차이 임계
 
+# 파일럿 03 (closure arc) 발견: state YAML 산문체 누적 위험
+BULLET_LEN_WARN = 120         # bullet 한 줄 글자수 초과 시 WARN
+FILE_SIZE_WARN_BYTES = 15_000  # character-states.yaml 단일 파일 임계 (15 KB)
+
 
 def parse_dt(s):
     if not s:
@@ -188,6 +192,51 @@ def validate_sp_constraints(chapters: list[dict]) -> tuple[list[str], list[str]]
     return errors, warnings
 
 
+def _walk_strings(node, path: str = ""):
+    """yaml.safe_load 결과를 재귀로 돌며 (path, str_value) 튜플 yield."""
+    if isinstance(node, dict):
+        for k, v in node.items():
+            yield from _walk_strings(v, f"{path}.{k}" if path else str(k))
+    elif isinstance(node, list):
+        for i, v in enumerate(node):
+            yield from _walk_strings(v, f"{path}[{i}]")
+    elif isinstance(node, str):
+        yield path, node
+
+
+def validate_prose_accumulation(ch_dir: Path, ch_num: int, loaded: dict) -> tuple[list[str], list[str]]:
+    """파일럿 03 발견 — closure arc 에서 state YAML 의 산문체 누적 감지.
+
+    - 파일 크기: character-states.yaml ≥ 15KB → WARN
+    - bullet 길이: 한 줄 ≥ 120자 → WARN (최대 5건만 표시)
+    """
+    errors: list[str] = []
+    warnings: list[str] = []
+    cs = ch_dir / "character-states.yaml"
+    if cs.exists():
+        size = cs.stat().st_size
+        if size >= FILE_SIZE_WARN_BYTES:
+            warnings.append(
+                f"ch{ch_num:02d} character-states.yaml: {size:,} bytes "
+                f"(임계 {FILE_SIZE_WARN_BYTES:,}). 산문체 누적 의심 — bullet 축약 권장."
+            )
+    long_bullets: list[tuple[str, str, int]] = []
+    for fname, data in loaded.items():
+        if data is None:
+            continue
+        for path, value in _walk_strings(data):
+            if len(value) >= BULLET_LEN_WARN:
+                long_bullets.append((fname, path, len(value)))
+    for fname, path, length in long_bullets[:5]:
+        warnings.append(
+            f"ch{ch_num:02d} {fname}: 긴 bullet ({length}자) at {path} — "
+            f"산문체 금지 규칙 (state-updater spec) 위반 의심. 사실 단위로 분할."
+        )
+    if len(long_bullets) > 5:
+        warnings.append(f"ch{ch_num:02d}: 긴 bullet {len(long_bullets)} 건 (5 건만 표시).")
+    return errors, warnings
+
+
 def validate_sp_payoff_history(chapters: list[dict]) -> tuple[list[str], list[str]]:
     """payoff 가 뒤로 이동하면 ERROR (이미 지난 챕터보다 작은 값). 앞으로만 이동하면 WARN."""
     errors: list[str] = []
@@ -235,7 +284,7 @@ def main() -> int:
             return 2
         e, loaded = load_chapter(d)
         errors.extend(e)
-        chapters.append({"ch_num": args.chapter, "loaded": loaded})
+        chapters.append({"ch_num": args.chapter, "loaded": loaded, "dir": d})
     else:
         for d in sorted(STATE.glob("chapter-*")):
             try:
@@ -244,7 +293,13 @@ def main() -> int:
                 continue
             e, loaded = load_chapter(d)
             errors.extend(e)
-            chapters.append({"ch_num": ch_num, "loaded": loaded})
+            chapters.append({"ch_num": ch_num, "loaded": loaded, "dir": d})
+
+    # 산문체 누적 검사 (모든 모드에서 실행 — 파일별 검사이므로 단독 챕터에서도 의미 있음)
+    for ch_data in chapters:
+        e, w = validate_prose_accumulation(ch_data["dir"], ch_data["ch_num"], ch_data["loaded"])
+        errors.extend(e)
+        warnings.extend(w)
 
     # 의미적 검증 (전 챕터 대상)
     if not args.chapter:

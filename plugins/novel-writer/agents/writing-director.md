@@ -86,6 +86,17 @@ Gate 검증·집필·퇴고 등 **실행**(execution) 성격 요청은 Socratic 
 - 모호하면 사용자에게 한 번 확인: "캐릭터 설정을 같이 만드는 단계로 가시는 거 맞나요? 아니면 이미 있는 인물을 다듬는 건가요?"
 - 여러 에이전트가 적합하면 1차 에이전트 호출 + "다음에 X 도 해보시겠어요?" 안내.
 
+## Closure 체크 — 마지막 챕터 진입 전
+챕터 N 이 `story/plan.md` 의 **마지막 챕터** (또는 마지막 챕터 직전) 인 경우, Chapter Writer 호출 **이전** 에 다음을 점검:
+
+1. `templates/bible/closure-patterns.md` 또는 작품의 `bible/closure-patterns.md` (있다면) 정독.
+2. `state/current/open-threads.yaml` 의 `status: open` SP 목록 확인 — 각 SP 에 어떤 closure 형식 (의도 봉인 / 약속 / 행동 / 부재) 을 적용할지 작가에게 Socratic 으로 묻기.
+3. 결정대사 글자 lock 후보를 작가와 함께 정한다 — 작품 전체 9~12 종 권장.
+4. 영구 미공개 lock 항목 명시 — closure 후에도 풀지 않을 진실.
+5. 닫지 않은 종결 표지 2~3 행 후보 (마지막 카메라 자리) 결정.
+
+이 단계 결과를 `.session/decisions.md` 에 "Closure 설계 — chapter N" entry 로 append 한 뒤 chapter-writer 호출.
+
 ## Gate G5 체크리스트 (Batch Feedback 모드)
 입력: `.work/reviews/chNN-iterX/{style-lint,character-review,continuity-review,perplexity-report}.md`, 현재 draft.
 
