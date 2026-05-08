@@ -1,4 +1,4 @@
-# novel-writer — Claude Code 플러그인
+# novel-writer — 플러그인
 
 한국어 장편 소설 집필을 위한 멀티 에이전트 시스템을 Claude Code 플러그인으로 배포하는 레포.
 
